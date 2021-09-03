@@ -1,0 +1,8 @@
+@mixin buttons($background, $color){
+    background-color: $background;
+    color: $color;
+};
+@mixin reset(){
+    margin: 0;
+    padding: 0;
+};

@@ -1,0 +1,25 @@
+.form {
+    border: 1px solid #999;
+    padding: 20px;
+    width: 50vw;
+
+    .form-input{
+        padding: 5px 8px;
+    }
+    .form-row{
+        margin: 10px 0;
+    }
+    .button{
+        border:none;
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+    .button__primary{
+        @include buttons($primary-color, $secondary-color);
+    }
+    .button__secondary{
+        @include buttons($secondary-color, $primary-color);
+        border: 1px solid $primary-color;
+    }
+}
