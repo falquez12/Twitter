@@ -8,7 +8,7 @@ import {
 import dummies from "./dummies"
 const Trending = () => {
     const elem = dummies.map((e,index) => {
-                    return <Elements trending={(index+1)+".Trending"} hashtag={"#"+e.hashtag} ntweets = {e.ntweets+"k Tweets"} ></Elements>
+        return <Elements trending={(index+1)+".Trending"} hashtag={"#"+e.hashtag} ntweets = {e.ntweets+"k Tweets"} ></Elements>
     })
     return (
         <>
