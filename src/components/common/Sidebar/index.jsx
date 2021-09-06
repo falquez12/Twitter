@@ -3,8 +3,6 @@ import routes from "../../../lib/routes";
 import { NavContainer, DivElement, PHome, Divlogo } from "./navelements";
 import Button from "../../common/Button";
 import SelectIcon from "../../../lib/ui/icons/icons";
-import Messages from "../../Private/Timeline/Messages";
-import Vectorblue from "../../../lib/ui/vectors/vector_blue";
 
 const Nav = () => {
   const { restricted } = routes;

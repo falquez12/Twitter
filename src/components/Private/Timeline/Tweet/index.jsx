@@ -1,5 +1,6 @@
 import {
- AllTweets
+ AllTweets,
+ HomeH1
 } from "./tweetelements";
 import Elements from "./elements";
 
@@ -16,6 +17,7 @@ const Tweet = () => {
     return (
         <>  
             <AllTweets>
+                <HomeH1>Home</HomeH1>
                 {elems}
             </AllTweets>
         </>
