@@ -6,7 +6,7 @@ import {
 } from "./trendingelements";
 
 import dummies from "./dummies"
-const Trending = () => {
+const Tweet = () => {
     const elem = dummies.map((e,index) => {
         return <Elements trending={(index+1)+".Trending"} hashtag={"#"+e.hashtag} ntweets = {e.ntweets+"k Tweets"} ></Elements>
     })
@@ -21,4 +21,4 @@ const Trending = () => {
     );
 }
 
-export default Trending;
+export default Tweet;

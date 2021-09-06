@@ -3,6 +3,7 @@ import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Timeline from "./../components/Private/Timeline";
 import Trending from "./../components/Private/Timeline/Trending";
+import Tweet from "./../components/Private/Timeline/Tweet/elements";
 
 const routes = {
   restricted: [
@@ -15,6 +16,11 @@ const routes = {
       title: "Trending",
       path: "/Trending",
       component: Trending,
+    },
+     {
+      title: "Tweet",
+      path: "/Tweet",
+      component: Tweet,
     },
   ],
    unrestricted: [
