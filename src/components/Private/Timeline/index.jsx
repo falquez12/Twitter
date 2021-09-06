@@ -10,6 +10,7 @@ import { ColNav } from "./timelineelements";
 import { Row, Col, Container } from "react-bootstrap";
 import Searchbar from "../Search/searchbar.jsx";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import routes from "../../../lib/routes";
 const Timeline = () => {
   return (
     <BrowserRouter>

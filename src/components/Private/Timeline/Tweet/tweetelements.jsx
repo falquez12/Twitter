@@ -70,3 +70,17 @@ export const AllTweets = styled.div`
   box-shadow: inset -1px 0px 0px rgba(0, 0, 0, 0.08),
     inset 1px 0px 0px rgba(0, 0, 0, 0.08);
 `;
+
+export const HomeH1 = styled.h1`
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 19px;
+  line-height: 22px;
+
+  color: #000000;
+  margin-left:32px;
+  margin-top:53px;
+  margin-bottom:27px;
+`;
+
