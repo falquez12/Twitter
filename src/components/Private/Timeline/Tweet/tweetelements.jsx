@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Row, Col } from "react-bootstrap";
-import { H1, P, A } from "../../../../lib/ui/text";
+import { Col } from "react-bootstrap";
 
 export const TweetContainer = styled(Col)`
   display: flex;

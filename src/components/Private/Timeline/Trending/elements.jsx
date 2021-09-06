@@ -1,8 +1,7 @@
 import {
  ElementContainer,
  ElementH1,
- ElementWord,
- ElementLine
+ ElementWord
 } from "./trendingelements";
 const Elements = (props) => {
     const {trending, hashtag, ntweets} = props;
