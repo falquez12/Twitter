@@ -1,4 +1,4 @@
-const Vector_blue = () => (
+const Vectorblue = () => (
   <svg
     width="67"
     height="54"
@@ -13,4 +13,4 @@ const Vector_blue = () => (
   </svg>
 );
 
-export default Vector_blue;
+export default Vectorblue;

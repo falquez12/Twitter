@@ -15,6 +15,9 @@ export const StyledButton = styled.button`
       border: none;
       background-color: ${primaryColor};
       color: ${secondaryColor};
+      &:hover {
+        background-color: rgba(29, 161, 242, 0.5);
+      }
     `}
 
   ${({ secondary }) =>
