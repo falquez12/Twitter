@@ -46,4 +46,9 @@ export const StyledButton = styled.button`
     css`
       width: 100%;
     `}
+    ${({ round }) =>
+    round &&
+    css`
+      border-radius: 100px;
+    `}
 `;

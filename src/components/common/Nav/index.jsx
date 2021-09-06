@@ -1,37 +1,40 @@
 import { Link } from "react-router-dom";
 import routes from "../../../lib/routes";
-import Vector_nav from "../vectors/vector_nav";
-import { Row, Col } from "react-bootstrap";
-import {
-  NavContainer,
-  H2Nav,
-  DivVector,
-  DivLogo,
-  NavDiv,
-  TitleDiv,
-  AHome,
-  TextButton,
-} from "./navelements";
+import { NavContainer, DivElement, PHome, Divlogo } from "./navelements";
 import Button from "../../common/Button";
+import SelectIcon from "../../../lib/ui/icons/icons";
+import Messages from "../../Private/Timeline/Messages";
+import Vectorblue from "../../../lib/ui/vectors/vector_blue";
 
 const Nav = () => {
   const { restricted } = routes;
-
+  const result = restricted.filter((word) =>
+    [
+      "Home",
+      "Trending",
+      "Notifications",
+      "Messages",
+      "Bookmarks",
+      "Lists",
+      "Profile",
+    ].includes(word.title)
+  );
   return (
     <NavContainer>
-      <DivLogo>
-      </DivLogo>
-      {restricted.map(({ path, title }) => (
-        <NavDiv>
-          <TitleDiv>
-            <H2Nav>
-              <AHome href={path}>{title}</AHome>
-            </H2Nav>
-          </TitleDiv>
-        </NavDiv>
+      <Divlogo>
+        <SelectIcon name="Twitter" />
+      </Divlogo>
+      {result.map(({ path, title }) => (
+        <Link to={path}>
+          <DivElement>
+            <SelectIcon name={title} />
+            <PHome>{title}</PHome>
+          </DivElement>
+        </Link>
       ))}
-
-      <Button text="Tweet" secondary fluid></Button>
+      <Divlogo>
+        <Button text="Tweet" primary fluid round></Button>
+      </Divlogo>
     </NavContainer>
   );
 };

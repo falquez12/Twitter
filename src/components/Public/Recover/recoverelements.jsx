@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "react-bootstrap";
+
 import { H1, P, A } from "../../../lib/ui/text";
 
 export const StyledContainer = styled.div`

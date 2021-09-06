@@ -11,17 +11,13 @@ import Bookmarks from "../components/Private/Timeline/Bookmarks";
 import Lists from "../components/Private/Timeline/Lists";
 import Messages from "../components/Private/Timeline/Messages";
 
+import Search from "../components/Private/Search";
 const routes = {
   restricted: [
     {
       title: "Home",
       path: "/home",
       component: Timeline,
-    },
-    {
-      title: "Profile",
-      path: "/profile",
-      component: Profile,
     },
     {
       title: "Trending",
@@ -34,6 +30,11 @@ const routes = {
       component: Notifications,
     },
     {
+      title: "Messages",
+      path: "/Messages",
+      component: Messages,
+    },
+    {
       title: "Bookmarks",
       path: "/bookmarks",
       component: Bookmarks,
@@ -44,14 +45,19 @@ const routes = {
       component: Lists,
     },
     {
-      title: "Messages",
-      path: "/Messages",
-      component: Messages,
+      title: "Profile",
+      path: "/profile",
+      component: Profile,
     },
-     {
+    {
       title: "Tweet",
       path: "/Tweet",
       component: Tweet,
+    },
+    {
+      title: "Search",
+      path: "/search",
+      component: Search,
     },
   ],
   unrestricted: [
