@@ -4,7 +4,6 @@ import Navbar from "../../common/Nav/index";
 import { ColNav } from "./timelineelements";
 import { Row, Col, Container } from "react-bootstrap";
 import Searchbar from "../Search/searchbar.jsx";
-
 const Timeline = () => {
   return (
     <>

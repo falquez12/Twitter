@@ -4,13 +4,19 @@ import { H1, P, A } from "../../../lib/ui/text";
 
 export const Search_bar = styled.div`
   align-items: center;
+  min-width: 120px;
+  margin: 20px 0px;
+`;
+
+export const Searchinput = styled.input`
+  padding-left: 20px;
   background-color: #e7ecf0;
   border-radius: 100px;
   display: flex;
   height: 48px;
-  min-width: 280px;
-  padding: 0 16px;
-  margin-bottom:5px;
+  width: 280px;
+  outline: none;
+  border: 0px;
 `;
 
 export const Searchtext = styled(H1)`
@@ -19,6 +25,7 @@ export const Searchtext = styled(H1)`
   font-weight: normal;
   letter-spacing: 0;
   margin-left: 8px;
+  margin-top: 5px;
   font-size: 15px;
   line-height: 18px;
   min-height: 18px;
@@ -26,7 +33,6 @@ export const Searchtext = styled(H1)`
 `;
 
 export const SearchP = styled.p`
-height: 20px;
-width: 20px;
+  height: 20px;
+  width: 20px;
 `;
-

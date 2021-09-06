@@ -55,7 +55,7 @@ const Login = () => {
         </Link>
         <Divaccount>
           <PLogin>
-            Dont have an account?{" "}
+            Don't have an account?{" "}
             <ALogin href="/signup">Join free today</ALogin>
           </PLogin>
         </Divaccount>
