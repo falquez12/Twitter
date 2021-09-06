@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import routes from "../../../lib/routes";
 import Vector_nav from "../vectors/vector_nav";
+import { Row, Col } from "react-bootstrap";
 import {
   NavContainer,
   H2Nav,
@@ -9,7 +10,9 @@ import {
   NavDiv,
   TitleDiv,
   AHome,
+  TextButton,
 } from "./navelements";
+import Button from "../../common/Button";
 
 const Nav = () => {
   const { restricted } = routes;
@@ -24,13 +27,13 @@ const Nav = () => {
           <Vector_nav title={title} />
           <TitleDiv>
             <H2Nav>
-              <Link to={path}>
-                <AHome>{title}</AHome>
-              </Link>
+              <AHome href={path}>{title}</AHome>
             </H2Nav>
           </TitleDiv>
         </NavDiv>
       ))}
+
+      <Button text="Tweet" secondary fluid></Button>
     </NavContainer>
   );
 };

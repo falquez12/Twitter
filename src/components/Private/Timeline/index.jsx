@@ -8,6 +8,7 @@ const Timeline = () => {
   return (
     <>
       <BrowserRouter>
+        
         <Nav />
         <Container>
         <H1T>Home</H1T>
