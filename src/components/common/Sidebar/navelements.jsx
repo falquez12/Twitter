@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import { H1, P, A } from "../../../lib/ui/text";
-import Button from "../../common/Button";
+import Button from "../Button";
 
 export const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 220px;
 `;
 
 export const PHome = styled(P)`
@@ -19,10 +18,14 @@ export const PHome = styled(P)`
   text-decoration: none;
   display: INLINE-BLOCK;
   margin-left: 15px;
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+
 `;
 
 export const DivElement = styled.div`
-  margin: 15px 0px;
+  margin: 0.5rem 0px;
   color: black;
 `;
 export const Divlogo = styled.div`

@@ -8,10 +8,9 @@ export const TweetContainer = styled(Col)`
   align-items: flex-start;
   padding: 0px;
   background: #ffffff;
-
+  max-width: 574px;
   position: static;
-  width: 692px;
-  height: 432px;
+  width: 100%;
   left: 0px;
   top: 0px;
 `;
@@ -24,7 +23,7 @@ export const TweetName = styled.div`
   }
 `;
 export const TweetText = styled.p`
-  width: 574px;
+  width: 100%;;
   left: 56px;
   top: 30px;
   font-style: normal;
@@ -62,7 +61,6 @@ export const ProfilePicture = styled.img`
 `;
 
 export const AllTweets = styled.div`
-  height: 2462px;
   left: -1px;
   right: -1px;
   top: -54px;

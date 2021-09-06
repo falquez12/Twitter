@@ -21,9 +21,6 @@ const Nav = () => {
   );
   return (
     <NavContainer>
-      <Divlogo>
-        <SelectIcon name="Twitter" />
-      </Divlogo>
       {result.map(({ path, title }) => (
         <Link to={path}>
           <DivElement>

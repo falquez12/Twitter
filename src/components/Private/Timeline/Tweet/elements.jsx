@@ -41,9 +41,9 @@ const TweetElement = (props) => {
           <img
             src={tweetphoto}
             alt="image"
-            height="285"
-            width="574"
-            style={{ borderRadius: "12px" }}
+            width= "100%"
+            height="285px"
+            style={{ borderRadius: "12px",maxWidth:"574px",display:"block",objectFit:"cover" }}
           />
 
           <TweetIcons>
