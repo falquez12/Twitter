@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Row, Col } from "react-bootstrap";
-import { H1, P, A } from "../../../lib/ui/text";
+import { H1 } from "../../../lib/ui/text";
 
-export const Search_bar = styled.div`
+export const SearchBar = styled.div`
   align-items: center;
   min-width: 120px;
   margin: 20px 0px;

@@ -1,16 +1,15 @@
-import { Search_bar, Searchtext, Searchinput } from "./searchelements";
-import { AiOutlineSearch } from "react-icons/ai";
+import { SearchBar, Searchinput } from "./searchelements";
 
 const Searchbar = () => {
   return (
-    <Search_bar>
+    <SearchBar>
       <Searchinput
         title="Search"
         type="text"
         name="search"
         placeholder="Search"
       />
-    </Search_bar>
+    </SearchBar>
   );
 };
 

@@ -4,11 +4,10 @@ import {
   TweetText,
   TweetIcons,
   Container,
-  ProfilePicture
+  ProfilePicture,
 } from "./tweetelements";
 import { GoVerified } from "react-icons/go";
 import SelectIcon from "../../../../lib/ui/icons/icons";
-
 
 const TweetElement = (props) => {
   const { profilepicture, name, username, time, text, tweetphoto } = props;
@@ -37,10 +36,15 @@ const TweetElement = (props) => {
 
           <img
             src={tweetphoto}
-            alt="image"
-            width= "100%"
+            alt="tweetimage"
+            width="100%"
             height="285px"
-            style={{ borderRadius: "12px",maxWidth:"574px",display:"block",objectFit:"cover" }}
+            style={{
+              borderRadius: "12px",
+              maxWidth: "574px",
+              display: "block",
+              objectFit: "cover",
+            }}
           />
 
           <TweetIcons>

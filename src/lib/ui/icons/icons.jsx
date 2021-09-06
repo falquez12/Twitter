@@ -2,7 +2,7 @@ import { FaTwitter } from "react-icons/fa";
 import { RiHome7Fill } from "react-icons/ri";
 import { BiHash, BiBell, BiListUl } from "react-icons/bi";
 import { FiMail } from "react-icons/fi";
-import { BsBookmarks, BsCardList } from "react-icons/bs";
+import { BsBookmarks } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { BiMessageRounded } from "react-icons/bi";
 import { FaRetweet } from "react-icons/fa";

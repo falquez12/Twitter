@@ -11,7 +11,6 @@ import Lists from "./Lists";
 import Messages from "./Messages";
 import Bookmarks from "./Bookmarks";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import routes from "../../../lib/routes";
 
 const Timeline = () => {
   return (
