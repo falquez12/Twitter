@@ -36,7 +36,11 @@ export const StyledButton = styled.button`
         color: ${secondaryColor};
       }
     `}
-
+    ${({ large }) =>
+    large &&
+    css`
+      min-width: 350px;
+    `}
     ${({ fluid }) =>
     fluid &&
     css`

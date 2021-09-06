@@ -3,6 +3,7 @@ import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Timeline from "./../components/Private/Timeline";
 import Trending from "./../components/Private/Timeline/Trending";
+import Recover from "./../components/Public/Recover";
 
 const routes = {
   restricted: [
@@ -17,7 +18,7 @@ const routes = {
       component: Trending,
     },
   ],
-   unrestricted: [
+  unrestricted: [
     {
       title: "Home",
       path: "/",
@@ -32,6 +33,11 @@ const routes = {
       title: "Sign Up",
       path: "/signup",
       component: SignUp,
+    },
+    {
+      title: "Recover",
+      path: "/recover",
+      component: Recover,
     },
   ],
 };

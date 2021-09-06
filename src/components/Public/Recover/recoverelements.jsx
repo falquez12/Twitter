@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Container } from "react-bootstrap";
 import { H1, P, A } from "../../../lib/ui/text";
 
 export const StyledContainer = styled.div`
@@ -23,13 +24,14 @@ export const ALogin = styled(A)`
   color: #1da1f2;
   margin-bottom: 200px;
 `;
-export const Divforgot = styled.div`
-  margin: 15px 0 20px 0;
-`;
 
 export const Divaccount = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
   margin-top: 10px;
+`;
+
+export const DivBoton = styled.div`
+  margin: 20px 0;
 `;
