@@ -3,7 +3,7 @@ import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Timeline from "./../components/Private/Timeline";
 import Trending from "./../components/Private/Timeline/Trending";
-import Tweet from "./../components/Private/Timeline/Tweet/elements";
+import Tweet from "./../components/Private/Timeline/Tweet/index";
 
 const routes = {
   restricted: [

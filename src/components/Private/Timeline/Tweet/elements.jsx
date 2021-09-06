@@ -13,28 +13,31 @@ import { FaRetweet } from 'react-icons/fa';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { HiInboxIn } from 'react-icons/hi';
 
-import tweet1 from "../../../../imgs/tweet1.jpg"
-import profilepicture1 from "../../../../imgs/profilepicture1.jpg"
+// import tweet1 from "../../../../imgs/tweet1.jpg"
+// import profilepicture1 from "../../../../imgs/profilepicture1.jpg"
 
-const TweetElement = () => {
+const TweetElement = (props) => {
+    const {profilepicture, name, username, time, text, tweetphoto} = props;
+
     return (
         <>  
             <Container>
-            <ProfilePicture src={profilepicture1} alt="profilepicture" height="40" width="40"/>
+            <ProfilePicture src={profilepicture} alt="profilepicture" height="40" width="40"/>
                 <TweetContainer>
                 
                 <TweetName>
-                    <p>Annie</p>
+                    <p>{name}</p>
                     <p><GoVerified/></p>
-                    <p>@annie</p>
+                    <p>{username}</p>
                     <p>.</p>
-                    <p>14s</p>
+                    <p>{time}</p>
                 </TweetName>
+
                 <TweetText>
-                    This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis This is a tweet. It can be long, or short. Depends on what you have to say. It can have some hashtags too. #likethis 
+                    {text}
                 </TweetText>
                 
-                <TweetImage><img src={tweet1} alt="profile" height="285" width="574"/></TweetImage>
+                <TweetImage><img src={tweetphoto} alt="profile" height="285" width="574"/></TweetImage>
                 
                 <TweetIcons>
                     <div><BiMessageRounded></BiMessageRounded></div>

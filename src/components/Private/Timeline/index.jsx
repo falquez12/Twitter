@@ -1,8 +1,16 @@
+import Trending from "./Trending/index";
+import Tweet from "./Tweet/index";
+
+import {
+ Container
+} from "./timelinecss";
 const Timeline = () => {
     return (
         <>
-            <h2>Timeline</h2>
-            <p>hola mundo </p>
+            <Container>
+            <Tweet></Tweet>
+            <Trending></Trending>
+            </Container>
         </>
     );
 }

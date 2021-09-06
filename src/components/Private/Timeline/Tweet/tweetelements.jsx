@@ -69,6 +69,15 @@ export const Container = styled.div`
     }
 `;
 export const ProfilePicture = styled.img`
-        border-radius: 52%;
+    border-radius: 52%;
+`;
+
+export const AllTweets = styled.div`
+    height: 2462px;
+    left: -1px;
+    right: -1px;
+    top: -54px;
+    background: #FFFFFF;
+    box-shadow: inset -1px 0px 0px rgba(0, 0, 0, 0.08), inset 1px 0px 0px rgba(0, 0, 0, 0.08);
 
 `;
