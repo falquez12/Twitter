@@ -1,8 +1,8 @@
 
-###`Integrantes del grupo`
- -  Julian Falquez Ruiz
- -  Jesus Romero Barros
- -  Sebastian Santander Fontalvo
+`Integrantes del grupo` && `commits`
+ -  Julian Falquez Ruiz - Jfalquezj - dropface12
+ -  Jesus Romero Barros - JesusRomeroB
+ -  Sebastian Santander Fontalvo - sesantander
 
 
 
