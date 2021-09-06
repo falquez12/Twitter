@@ -6,7 +6,6 @@ export const H1 = styled.h1`
   font-size: 30px;
   line-height: 35px;
 `;
-
 export const P = styled.p`
   font-style: normal;
   font-weight: normal;

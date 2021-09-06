@@ -33,7 +33,7 @@ const Home = () => (
               <AHome href="/singup">Join free today</AHome>
             </PHome>
             <Link to="/singup">
-              <Button text="Sing Up" secondary fluid></Button>
+              <Button text="Sign Up" secondary fluid></Button>
             </Link>
           </div>
         </StyledHomeCol>

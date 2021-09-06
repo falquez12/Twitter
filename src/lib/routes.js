@@ -2,6 +2,7 @@ import Login from "../components/Public/Login";
 import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Timeline from "./../components/Private/Timeline";
+import Trending from "./../components/Private/Timeline/Trending";
 
 const routes = {
   restricted: [
@@ -10,8 +11,13 @@ const routes = {
       path: "/home",
       component: Timeline,
     },
+    {
+      title: "Trending",
+      path: "/Trending",
+      component: Trending,
+    },
   ],
-  unrestricted: [
+   unrestricted: [
     {
       title: "Home",
       path: "/",
