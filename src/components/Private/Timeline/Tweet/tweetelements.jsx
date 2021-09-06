@@ -62,6 +62,7 @@ export const TweetIcons = styled.div`
 `;
 
 export const Container = styled.div`
+    margin-top:12px;
     display:flex;
     flex-direction:row;
     & > p { 

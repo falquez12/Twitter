@@ -7,7 +7,7 @@ import Elements from "./elements";
 import dummies from "./dummies"
 
 const Tweet = () => {
-    const elems = dummies.map((e,index) => {
+    const elems = dummies.map((e) => {
         return <Elements 
         profilepicture={e.profilepicture} name={e.name} username = {e.username} 
         time = {e.time} text = {e.text} tweetphoto = {e.tweetphoto}
