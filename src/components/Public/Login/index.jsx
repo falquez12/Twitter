@@ -6,11 +6,15 @@ import Vector_blue from "../../common/vectors/vector_blue";
 import Form from "../../common/Form";
 import Input from "../../common/Input";
 
+
 const Login = () => (
   <>
     <StyledContainer>
       <Form>
         <Input />
+        <Link to="/home">
+              <Button text="Login" secondary fluid></Button>
+        </Link>
       </Form>
     </StyledContainer>
   </>

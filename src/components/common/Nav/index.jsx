@@ -1,23 +1,38 @@
-import { Link } from 'react-router-dom';
-import routes from '../../../lib/routes'
+import { Link } from "react-router-dom";
+import routes from "../../../lib/routes";
+import Vector_nav from "../vectors/vector_nav";
+import {
+  NavContainer,
+  H2Nav,
+  DivVector,
+  DivLogo,
+  NavDiv,
+  TitleDiv,
+  AHome,
+} from "./navelements";
 
 const Nav = () => {
-    const { restricted, unrestricted } = routes;
+  const { restricted } = routes;
 
-    return (
-        <nav>
-            <ul>
-                {
-                    restricted.map(({ path, title }) =>
-                        <li><Link to={path}>{title}</Link></li>)
-                }
-                {
-                    unrestricted.map(({ path, title }) =>
-                        <li><Link to={path}>{title}</Link></li>)
-                }
-            </ul>
-        </nav>
-    );
-}
+  return (
+    <NavContainer>
+      <DivLogo>
+        <Vector_nav title="Logo" />
+      </DivLogo>
+      {restricted.map(({ path, title }) => (
+        <NavDiv>
+          <Vector_nav title={title} />
+          <TitleDiv>
+            <H2Nav>
+              <Link to={path}>
+                <AHome>{title}</AHome>
+              </Link>
+            </H2Nav>
+          </TitleDiv>
+        </NavDiv>
+      ))}
+    </NavContainer>
+  );
+};
 
 export default Nav;
