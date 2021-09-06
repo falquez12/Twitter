@@ -12,9 +12,17 @@ import {
   AHome,
   DivVector,
 } from "./homeelements";
+import Metadata from "../../common/Metadata";
+
 const Home = () => (
   <>
     <Container fluid>
+    <Metadata
+            title="Home"
+            description="Join Twitter today. Follow what you like. Get to know what is people talking about. Join the conversation."
+            url="http://localhost:3000/"
+            img="img/twitterlogo.png"
+            />
       <StyledRow>
         <StyledCol>
           <Vectorwhite />

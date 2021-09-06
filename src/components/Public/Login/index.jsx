@@ -2,6 +2,7 @@ import Button from "../../common/Button";
 import Form from "../../common/Form";
 import Input from "../../common/Input";
 import Vectorblue from "../../../lib/ui/vectors/vector_blue";
+import Metadata from "../../common/Metadata";
 import { Link } from "react-router-dom";
 import {
   PLogin,
@@ -19,6 +20,12 @@ const Login = () => {
 
   return (
     <StyledContainer>
+      <Metadata
+            title="Login"
+            description="Log in the world of Twitter now so you can check the latest news your friends and the world are talking about."
+            url="http://localhost:3000/login"
+            img="img/twitterlogo.png"
+            />
       <div>
         <Vectorblue />
         <PLogin>My twitter</PLogin>

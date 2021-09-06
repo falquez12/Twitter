@@ -10,6 +10,7 @@ import {
   StyledContainer,
   DivBoton,
 } from "./recoverelements";
+import Metadata from "../../common/Metadata";
 
 const Recover = () => {
   function HandleSubmit() {
@@ -18,6 +19,12 @@ const Recover = () => {
 
   return (
     <StyledContainer>
+            <Metadata
+            title="Recover"
+            description="Recover your account and don't miss out what is happening."
+            url="http://localhost:3000/recover"
+            img="img/twitterlogo.png"
+            />
       <div>
         <Vectorblue />
         <PLogin>My twitter</PLogin>

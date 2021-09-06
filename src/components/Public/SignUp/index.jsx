@@ -10,6 +10,8 @@ import {
   StyledContainer,
   DivBoton,
 } from "./signupelements";
+import Metadata from "../../common/Metadata";
+
 
 const SignUp = () => {
   function HandleSubmit() {
@@ -19,6 +21,12 @@ const SignUp = () => {
   return (
     <div style={{ height: "100%" }}>
       <StyledContainer>
+      <Metadata
+            title="SignUp"
+            description="Sign Up in Twitter and be part of the most relevant social network in the world."
+            url="http://localhost:3000/signup"
+            img="img/twitterlogo.png"
+            />
         <div>
           <Vectorblue />
           <PLogin>My twitter</PLogin>

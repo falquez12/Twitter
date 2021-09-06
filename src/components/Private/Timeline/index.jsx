@@ -4,17 +4,24 @@ import Sidebar from "../../common/Sidebar/index";
 import { ColNav } from "./timelineelements";
 import { Row, Col, Container } from "react-bootstrap";
 import Searchbar from "../Search/searchbar.jsx";
-
 import Profile from "./Profile";
 import Notifications from "./Notifications";
 import Lists from "./Lists";
 import Messages from "./Messages";
 import Bookmarks from "./Bookmarks";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Metadata from "../../common/Metadata";
+
 
 const Timeline = () => {
   return (
     <BrowserRouter>
+      <Metadata
+        title="Home"
+        description="This is what is happening today in your feed. Find out the latest news, gossip and conversations people around the world are experiencing right now."
+        url="http://localhost:3000/home"
+        img="img/twitterlogo.png"
+      />
       <Container>
         <Row>
           <ColNav xs={3}>
