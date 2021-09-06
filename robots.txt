@@ -1,0 +1,10 @@
+User-agent: *
+
+Disallow: /profile
+Disallow: /search
+Disallow: /notifications
+Disallow: /bookmarks
+Disallow: /lists
+Disallow: /messages
+
+Sitemap: 

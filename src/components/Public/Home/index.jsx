@@ -29,7 +29,7 @@ const Home = () => (
               <Button text="Login now" secondary fluid></Button>
             </Link>
             <PHome>
-              Dont have an account?{" "}
+              Don't have an account?{" "}
               <AHome href="/singup">Join free today</AHome>
             </PHome>
             <Link to="/singup">
