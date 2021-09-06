@@ -20,11 +20,9 @@ const Nav = () => {
   return (
     <NavContainer>
       <DivLogo>
-        <Vector_nav title="Logo" />
       </DivLogo>
       {restricted.map(({ path, title }) => (
         <NavDiv>
-          <Vector_nav title={title} />
           <TitleDiv>
             <H2Nav>
               <AHome href={path}>{title}</AHome>

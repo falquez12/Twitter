@@ -26,14 +26,14 @@ const Home = () => (
             </DivVector>
             <H1Home>Welcome to Twitter</H1Home>
             <Link to="/login">
-              <Button text="Login now" secondary fluid></Button>
+              <Button large text="Login now" secondary fluid></Button>
             </Link>
             <PHome>
               Don't have an account?{" "}
               <AHome href="/singup">Join free today</AHome>
             </PHome>
-            <Link to="/singup">
-              <Button text="Sign Up" secondary fluid></Button>
+            <Link to="/signup">
+              <Button large text="Sign Up" secondary fluid></Button>
             </Link>
           </div>
         </StyledHomeCol>

@@ -9,3 +9,7 @@ export const StyledInput = styled.input`
   box-sizing: border-box;
   border-radius: 5px;
 `;
+
+export const StyledLabel = styled.label`
+  color: #4a5568;
+`;

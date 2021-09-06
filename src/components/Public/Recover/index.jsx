@@ -2,17 +2,16 @@ import Button from "../../common/Button";
 import Form from "../../common/Form";
 import Input from "../../common/Input";
 import Vectorblue from "../../../lib/ui/vectors/vector_blue";
-import { Link } from "react-router-dom";
 import {
   PLogin,
   ALogin,
   H1Login,
-  Divforgot,
   Divaccount,
   StyledContainer,
-} from "./loginelements";
+  DivBoton,
+} from "./recoverelements";
 
-const Login = () => {
+const Recover = () => {
   function HandleSubmit() {
     console.log("aaaaa");
   }
@@ -22,7 +21,7 @@ const Login = () => {
       <div>
         <Vectorblue />
         <PLogin>My twitter</PLogin>
-        <H1Login>Login to your account</H1Login>
+        <H1Login>Recover your password</H1Login>
         <Form>
           <Input
             key="username"
@@ -32,31 +31,19 @@ const Login = () => {
             name="username"
             placeholder=""
           />
-          <Input
-            title="Password"
-            key="password"
-            type="password"
-            id="password"
-            name="password"
-            placeholder=""
-          />
         </Form>
-        <Divforgot>
-          <ALogin href="/recover">Forgot password?</ALogin>
-        </Divforgot>
-        <Link to="/home">
+        <DivBoton>
           <Button
             fluid
-            text="Login now"
+            text="Recover your password"
             large
             primary
             onClick={() => HandleSubmit()}
           ></Button>
-        </Link>
+        </DivBoton>
         <Divaccount>
           <PLogin>
-            Dont have an account?{" "}
-            <ALogin href="/signup">Join free today</ALogin>
+            Return to <ALogin href="/login">Login</ALogin>
           </PLogin>
         </Divaccount>
       </div>
@@ -64,4 +51,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Recover;

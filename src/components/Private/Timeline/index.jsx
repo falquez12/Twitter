@@ -1,22 +1,23 @@
-import Nav from "../../common/Nav";
-import Profile from "./Profile";
-import Trending from "./Trending";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Container, Overlap, H1T} from "./timelineelements";
+import Trending from "./Trending/index";
+import Tweet from "./Tweet/index";
+import Navbar from "../../common/Nav/index";
+import Searchbar from "../Search/searchbar.jsx";
 
+import {
+ Container
+} from "./timelinecss";
 const Timeline = () => {
-  return (
-    <>
-      <BrowserRouter>
-        
-        <Nav />
-        <Container>
-        <H1T>Home</H1T>
-        </Container>
-        
-      </BrowserRouter>
-    </>
-  );
-};
+    return (
+        <>
+           
+            <Container>
+            <Navbar></Navbar>
+            <Tweet></Tweet>
+            <Trending></Trending>
+            <Searchbar></Searchbar>
+            </Container>
+        </>
+    );
+}
 
 export default Timeline;

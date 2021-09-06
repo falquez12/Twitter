@@ -1,13 +1,9 @@
-import {
-    Searchbar, Searchtext
-} from "./searchelements";
+import Searchbar from "./searchbar";
 
-const SignUp = () => {
+const Search = () => {
     return (
-        <Searchbar>
-            <Searchtext>Search</Searchtext>
-        </Searchbar>
+        <Searchbar/>
     );
 }
 
-export default SignUp;
+export default Search;

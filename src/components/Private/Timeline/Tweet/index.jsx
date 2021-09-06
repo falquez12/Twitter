@@ -1,22 +1,23 @@
-import Elements from "./elements";
 import {
- TrendingContainer,
- TrendingTitle,
- Showmore
-} from "./trendingelements";
+ AllTweets
+} from "./tweetelements";
+import Elements from "./elements";
+
 
 import dummies from "./dummies"
+
 const Tweet = () => {
-    const elem = dummies.map((e,index) => {
-        return <Elements trending={(index+1)+".Trending"} hashtag={"#"+e.hashtag} ntweets = {e.ntweets+"k Tweets"} ></Elements>
+    const elems = dummies.map((e) => {
+        return <Elements 
+        profilepicture={e.profilepicture} name={e.name} username = {e.username} 
+        time = {e.time} text = {e.text} tweetphoto = {e.tweetphoto}
+        ></Elements>
     })
     return (
-        <>
-            <TrendingContainer>
-            <TrendingTitle>Paris Trend</TrendingTitle>
-            {elem}
-            <Showmore>Show more</Showmore>
-            </TrendingContainer>
+        <>  
+            <AllTweets>
+                {elems}
+            </AllTweets>
         </>
     );
 }

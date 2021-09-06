@@ -10,6 +10,7 @@ export const NavContainer = styled.div`
   padding: 32px 25px;
   position: relative;
   width: 285px;
+  position:sticky;
 `;
 
 export const PNavHome = styled(P)`

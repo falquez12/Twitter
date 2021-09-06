@@ -1,10 +1,10 @@
-import { StyledInput } from "./inputelements";
+import { StyledInput, StyledLabel } from "./inputelements";
 
 const Input = (props) => {
   const { type, id, name, title, ...rest } = props;
   return (
     <div>
-      <label id={id}>{title}</label>
+      <StyledLabel id={id}>{title}</StyledLabel>
       <br />
       <StyledInput
         type={type}
