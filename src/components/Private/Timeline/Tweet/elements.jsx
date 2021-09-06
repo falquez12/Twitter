@@ -2,16 +2,13 @@ import {
   TweetContainer,
   TweetName,
   TweetText,
-  TweetImage,
   TweetIcons,
   Container,
-  ProfilePicture,
+  ProfilePicture
 } from "./tweetelements";
 import { GoVerified } from "react-icons/go";
 import SelectIcon from "../../../../lib/ui/icons/icons";
 
-// import tweet1 from "../../../../imgs/tweet1.jpg"
-// import profilepicture1 from "../../../../imgs/profilepicture1.jpg"
 
 const TweetElement = (props) => {
   const { profilepicture, name, username, time, text, tweetphoto } = props;

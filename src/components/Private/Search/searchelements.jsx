@@ -10,6 +10,7 @@ export const Search_bar = styled.div`
   height: 48px;
   min-width: 280px;
   padding: 0 16px;
+  margin-bottom:5px;
 `;
 
 export const Searchtext = styled(H1)`
