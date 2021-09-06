@@ -1,4 +1,4 @@
-const Vector_white = () => (
+const Vectorwhite = () => (
   <svg
     width="512"
     height="417"
@@ -13,4 +13,4 @@ const Vector_white = () => (
   </svg>
 );
 
-export default Vector_white;
+export default Vectorwhite;

@@ -9,6 +9,7 @@ import Notifications from "../components/Private/Timeline/Notifications";
 import Bookmarks from "../components/Private/Timeline/Bookmarks";
 import Lists from "../components/Private/Timeline/Lists";
 import Messages from "../components/Private/Timeline/Messages";
+
 const routes = {
   restricted: [
     {
@@ -45,6 +46,11 @@ const routes = {
       title: "Messages",
       path: "/Messages",
       component: Messages,
+    },
+     {
+      title: "Tweet",
+      path: "/Tweet",
+      component: Tweet,
     },
   ],
   unrestricted: [
