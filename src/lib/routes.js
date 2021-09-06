@@ -11,6 +11,7 @@ import Bookmarks from "../components/Private/Timeline/Bookmarks";
 import Lists from "../components/Private/Timeline/Lists";
 import Messages from "../components/Private/Timeline/Messages";
 
+import Search from "../components/Private/Search";
 const routes = {
   restricted: [
     {
@@ -52,6 +53,11 @@ const routes = {
       title: "Tweet",
       path: "/Tweet",
       component: Tweet,
+    },
+    {
+      title: "Search",
+      path: "/search",
+      component: Search,
     },
   ],
   unrestricted: [
