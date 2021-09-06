@@ -3,16 +3,13 @@ import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Timeline from "./../components/Private/Timeline";
 import Trending from "./../components/Private/Timeline/Trending";
-<<<<<<< HEAD
 import Recover from "./../components/Public/Recover";
-=======
 import Tweet from "./../components/Private/Timeline/Tweet/index";
 import Profile from "../components/Private/Timeline/Profile";
 import Notifications from "../components/Private/Timeline/Notifications";
 import Bookmarks from "../components/Private/Timeline/Bookmarks";
 import Lists from "../components/Private/Timeline/Lists";
 import Messages from "../components/Private/Timeline/Messages";
->>>>>>> f3bb3cb4adeb6e77b26f3029f1896ab722b61a0e
 
 const routes = {
   restricted: [
