@@ -3,8 +3,21 @@ import routes from "../../../lib/routes";
 import { NavContainer, DivElement, PHome, Divlogo } from "./navelements";
 import Button from "../../common/Button";
 import SelectIcon from "../../../lib/ui/icons/icons";
+import Addtweet from "../../../lib/ui/vectors/addtweet";
+import React, { useState, useEffect } from "react";
 
 const Nav = () => {
+  const [isMobile, setMobile] = useState(window.innerWidth > 960);
+
+  const updateMedia = () => {
+    setMobile(window.innerWidth > 960);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   const { restricted } = routes;
   const result = restricted.filter((word) =>
     [
@@ -28,7 +41,11 @@ const Nav = () => {
         </Link>
       ))}
       <Divlogo>
-        <Button text="Tweet" primary fluid round></Button>
+        {isMobile ? (
+          <Button text="Tweet" primary fluid round></Button>
+        ) : (
+          <Button text={<Addtweet />} primary fluid round></Button>
+        )}
       </Divlogo>
     </NavContainer>
   );
