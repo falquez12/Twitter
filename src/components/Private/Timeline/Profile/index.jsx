@@ -1,19 +1,48 @@
 import Metadata from "../../../common/Metadata";
-
+import {
+  StyledCol,
+  Horizontal,
+  IconDiv,
+  SpacedHorizontal,
+  H2Profile,
+  PProfile,
+  StyledImg,
+} from "./profileelements";
+import { BsCalendarFill } from "react-icons/bs";
+import Button from "../../../common/Button";
 const Profile = () => {
-    return (
-      <>
+  return (
+    <>
       <Metadata
-      title="Profile"
-      description="Cuztomize your profile and settings for your Twoitter account."
-      url="http://localhost:3000/profile"
-      img="img/twitterlogo.png"
+        title="Profile"
+        description="Cuztomize your profile and settings for your Twoitter account."
+        url="http://localhost:3000/profile"
+        img="img/twitterlogo.png"
       />
-        <h2>Profile</h2>
-        <p>hola mundo </p>
-      </>
-    );
-  };
-  
-  export default Profile;
-  
+      <StyledCol>
+        <StyledImg
+          src="img/profilepicture1.jpg"
+          alt="tweetimage"
+          width="100%"
+          height="185px"
+        />
+        <SpacedHorizontal>
+          <H2Profile>jesus</H2Profile>
+          <Button text="Follow" secondary fluid></Button>
+        </SpacedHorizontal>
+        <PProfile>@jesus</PProfile>
+        <Horizontal>
+          <IconDiv>
+            <BsCalendarFill />
+          </IconDiv>
+          <p>Joined in November 2013</p>
+        </Horizontal>
+        <Horizontal>
+          <p> <b>300</b> Siguiendo <b>17</b> Seguidores</p>
+        </Horizontal>
+      </StyledCol>
+    </>
+  );
+};
+
+export default Profile;
