@@ -1,6 +1,6 @@
 const dummies = [
     {
-        profilepicture:"https://images.pexels.com/users/avatars/2871253/anna-tarazevich-523.jpeg?auto=compress&fit=crop&h=256&w=256",
+        profilepicture:"https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9jcmVhdG9yLWltYWdlcy5wb2RjaGFzZXIuY29tL2Q0ZjhiYmNiNjUzYmFhNGQzY2YxNjUxMmI2ZmQzNTViLmpwZWc%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D",
         name:"Annie",
         username : "annie",
         time : "14s",
@@ -16,7 +16,7 @@ const dummies = [
         tweetphoto : "https://lh3.googleusercontent.com/proxy/hvSifTEKM5ecMity2bI_02A6hG77Dfpnn_3xdUD4bkhaE5yMC2RzdkZ7KwuI_plbSQ48SGWJYH9dqImcfAbRh0AetzROtBS7OeaXmuPnOHIIauWShPkSNNXYn6_HMipUI0rqKXEAW5ddtdV_EkN9CnqwCgBQTSUlg9ZR7LR4uA0uJkMJUt0CBeqxp4l3Eg",
     },
     {
-        profilepicture:"https://images.pexels.com/users/avatars/2871253/anna-tarazevich-523.jpeg?auto=compress&fit=crop&h=256&w=256",
+        profilepicture:"https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9jcmVhdG9yLWltYWdlcy5wb2RjaGFzZXIuY29tL2Q0ZjhiYmNiNjUzYmFhNGQzY2YxNjUxMmI2ZmQzNTViLmpwZWc%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D",
         name:"Serenity Jones",
         username : "crystalrobinson",
         time : "14s",

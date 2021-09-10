@@ -7,10 +7,10 @@ import {
   SpacedHorizontal,
   H2Profile,
   PProfile,
-  StyledImg,
 } from "./profileelements";
 import { BsCalendarFill } from "react-icons/bs";
 import Button from "../../../common/Button";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Profile = ({ setTitle }) => {
   useEffect(() => {
@@ -25,11 +25,18 @@ const Profile = ({ setTitle }) => {
         img="img/twitterlogo.png"
       />
       <StyledCol>
-        <StyledImg
-          src="https://pbs.twimg.com/media/D_DYp_qUEAEDAyc.jpg"
+        <LazyLoadImage
+          src="https://i.pinimg.com/originals/bd/6c/0b/bd6c0bef4a473bfca44d1f6c83c95006.png"
           alt="tweetimage"
           width="100%"
-          height="185px"
+          height="300vh"
+            style={{
+              borderRadius: "12px",
+              maxWidth: "574px",
+              display: "block",
+              objectFit: "cover",
+            }}
+          
         />
         <SpacedHorizontal>
           <H2Profile>jesus</H2Profile>

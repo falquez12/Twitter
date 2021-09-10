@@ -8,6 +8,7 @@ import {
 } from "./tweetelements";
 import { GoVerified } from "react-icons/go";
 import SelectIcon from "../../../../lib/ui/icons/icons";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const TweetElement = (props) => {
   const { profilepicture, name, username, time, text, tweetphoto } = props;
@@ -34,7 +35,7 @@ const TweetElement = (props) => {
 
           <TweetText>{text}</TweetText>
 
-          <img
+          <LazyLoadImage
             src={tweetphoto}
             alt="tweetimage"
             width="100%"
