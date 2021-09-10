@@ -10,7 +10,6 @@ import Button from "../../common/Button";
 import SelectIcon from "../../../lib/ui/icons/icons";
 import Addtweet from "../../../lib/ui/vectors/addtweet";
 import React, { useState, useEffect } from "react";
-import Vectorblue from "../../../lib/ui/vectors/vector_blue";
 
 const Side = () => {
   const [isMobile, setMobile] = useState(window.innerWidth > 1200);

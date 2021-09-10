@@ -2,14 +2,7 @@ import Login from "../components/Public/Login";
 import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Timeline from "./../components/Private/Timeline";
-import Trending from "./../components/Private/Timeline/Trending";
 import Recover from "./../components/Public/Recover";
-import Tweet from "./../components/Private/Timeline/Tweet/index";
-import Profile from "../components/Private/Timeline/Profile";
-import Notifications from "../components/Private/Timeline/Notifications";
-import Bookmarks from "../components/Private/Timeline/Bookmarks";
-import Lists from "../components/Private/Timeline/Lists";
-import Messages from "../components/Private/Timeline/Messages";
 
 import Search from "../components/Private/Search";
 const routes = {

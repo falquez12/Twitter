@@ -1,4 +1,4 @@
-import { AllTweets, HomeH1 } from "./tweetelements";
+import { AllTweets } from "./tweetelements";
 import Elements from "./tweet";
 import Metadata from "../../../common/Metadata";
 

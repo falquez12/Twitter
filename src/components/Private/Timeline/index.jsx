@@ -2,7 +2,6 @@ import Trending from "./Trending/index";
 import Tweet from "./Tweet/index";
 import Sidebar from "../../common/Sidebar/index";
 import { ColNav, Divmain, Divside } from "./timelineelements";
-import { Row, Col } from "react-bootstrap";
 import Searchbar from "../Search/searchbar.jsx";
 import Profile from "./Profile";
 import Notifications from "./Notifications";
