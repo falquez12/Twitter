@@ -14,7 +14,6 @@ import Metadata from "../../common/Metadata";
 
 const Recover = () => {
   function HandleSubmit() {
-    console.log("aaaaa");
   }
 
   return (

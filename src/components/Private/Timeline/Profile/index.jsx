@@ -21,12 +21,12 @@ const Profile = ({ setTitle }) => {
       <Metadata
         title="Profile"
         description="Cuztomize your profile and settings for your Twoitter account."
-        url="http://localhost:3000/profile"
+        url="https://twitterclone-b609d.web.app/profile"
         img="img/twitterlogo.png"
       />
       <StyledCol>
         <StyledImg
-          src="img/profilepicture1.jpg"
+          src="https://pbs.twimg.com/media/D_DYp_qUEAEDAyc.jpg"
           alt="tweetimage"
           width="100%"
           height="185px"

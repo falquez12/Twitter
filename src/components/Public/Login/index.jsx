@@ -15,7 +15,6 @@ import {
 
 const Login = () => {
   function HandleSubmit() {
-    console.log("aaaaa");
   }
 
   return (

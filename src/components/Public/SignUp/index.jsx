@@ -15,7 +15,6 @@ import Metadata from "../../common/Metadata";
 
 const SignUp = () => {
   function HandleSubmit() {
-    console.log("aaaaa");
   }
 
   return (
