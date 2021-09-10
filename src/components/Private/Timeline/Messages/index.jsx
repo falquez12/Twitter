@@ -1,10 +1,14 @@
-const Messages = () => {
-    return (
-        <>
-            <h2>Messages</h2>
-            <p>hola mundo </p>
-        </>
-    );
-}
+import { useEffect } from "react";
+
+const Messages = ({ setTitle }) => {
+  useEffect(() => {
+    setTitle("Messages");
+  });
+  return (
+    <>
+      <p>hola mundo </p>
+    </>
+  );
+};
 
 export default Messages;

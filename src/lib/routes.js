@@ -22,37 +22,37 @@ const routes = {
     {
       title: "Trending",
       path: "/trending",
-      component: Trending,
+      component: Timeline,
     },
     {
       title: "Notifications",
       path: "/notifications",
-      component: Notifications,
+      component: Timeline,
     },
     {
       title: "Messages",
       path: "/Messages",
-      component: Messages,
+      component: Timeline,
     },
     {
       title: "Bookmarks",
       path: "/bookmarks",
-      component: Bookmarks,
+      component: Timeline,
     },
     {
       title: "Lists",
       path: "/lists",
-      component: Lists,
+      component: Timeline,
     },
     {
       title: "Profile",
       path: "/profile",
-      component: Profile,
+      component: Timeline,
     },
     {
       title: "Tweet",
       path: "/Tweet",
-      component: Tweet,
+      component: Timeline,
     },
     {
       title: "Search",

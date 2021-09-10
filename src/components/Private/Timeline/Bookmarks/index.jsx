@@ -1,7 +1,11 @@
-const Bookmarks = () => {
+import { useEffect } from "react";
+
+const Bookmarks = ({ setTitle }) => {
+  useEffect(() => {
+    setTitle("Bookmarks");
+  });
   return (
     <>
-      <h2>Bookmarks</h2>
       <p>hola mundo </p>
     </>
   );

@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { Col } from "react-bootstrap";
-import { H1} from "../../../../lib/ui/text";
+import { H1 } from "../../../../lib/ui/text";
 
 export const TrendingContainer = styled(Col)`
   align-items: center;
   padding: 14px 0px;
   position: static;
   width: 280px;
-  height: 645px;
+  height: 600px;
   left: 0px;
   top: 64px;
   background: #f6f8fa;
@@ -54,9 +54,11 @@ export const ElementContainer = styled(Col)`
   flex-direction: column;
   width: 270px;
   height: 81px;
-  margin-top: 10px;
-  margin-left: 10px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.08); ;
+  padding-top: 10px;
+  padding-left: 20px;
+  margin-right: 0px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 `;
 
 export const ElementWord = styled(Col)`

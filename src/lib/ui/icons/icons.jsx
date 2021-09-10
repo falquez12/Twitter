@@ -1,7 +1,7 @@
 import { FaTwitter } from "react-icons/fa";
 import { RiHome7Fill } from "react-icons/ri";
 import { BiHash, BiBell, BiListUl } from "react-icons/bi";
-import { FiMail } from "react-icons/fi";
+import { FiMail, FiSearch } from "react-icons/fi";
 import { BsBookmarks } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { BiMessageRounded } from "react-icons/bi";
@@ -27,7 +27,7 @@ const SelectIcon = ({ name }) => {
     case "Lists":
       return <BiListUl size={siz} />;
     case "Twitter":
-      return <FaTwitter size={40} color={"#1DA1F2"} />;
+      return <FaTwitter size={35} color={"#1DA1F2"} />;
     case "Messages":
       return <FiMail size={siz} />;
     case "Retweet":
@@ -38,6 +38,8 @@ const SelectIcon = ({ name }) => {
       return <BiMessageRounded size={tweetsize} color={tweetcolor} />;
     case "Inbox":
       return <HiInboxIn size={tweetsize} color={tweetcolor} />;
+    case "Search":
+      return <FiSearch size={tweetsize} color={tweetcolor} />;
     default:
       return <></>;
   }

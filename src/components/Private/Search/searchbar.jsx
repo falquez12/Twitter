@@ -1,3 +1,4 @@
+import SelectIcon from "../../../lib/ui/icons/icons";
 import { SearchBar, Searchinput } from "./searchelements";
 
 const Searchbar = () => {
@@ -7,7 +8,7 @@ const Searchbar = () => {
         title="Search"
         type="text"
         name="search"
-        placeholder="Search"
+        placeholder={"Search"}
       />
     </SearchBar>
   );

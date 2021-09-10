@@ -7,7 +7,7 @@ export const TweetContainer = styled(Col)`
   align-items: flex-start;
   padding: 0px;
   background: #ffffff;
-  max-width: 574px;
+  max-width: 490px;
   position: static;
   width: 100%;
   left: 0px;
@@ -22,7 +22,7 @@ export const TweetName = styled.div`
   }
 `;
 export const TweetText = styled.p`
-  width: 100%;;
+  width: 100%;
   left: 56px;
   top: 30px;
   font-style: normal;
@@ -48,25 +48,23 @@ export const TweetIcons = styled.div`
 `;
 
 export const Container = styled.div`
-  margin: 12px 12px;
+  padding: 12px 12px;
   display: flex;
   flex-direction: row;
+  max-width: 600px;
+  border-bottom: 0.2px solid #eeebeb;
+  border-right: 0.2px solid #eeebeb;
+  border-left: 0.2px solid #eeebeb;
   & > p {
     margin-left: 5px;
   }
 `;
 export const ProfilePicture = styled.img`
   border-radius: 52%;
+  margin-right: 12px;
 `;
 
-export const AllTweets = styled.div`
-  left: -1px;
-  right: -1px;
-  top: -54px;
-  background: #ffffff;
-  box-shadow: inset -1px 0px 0px rgba(0, 0, 0, 0.08),
-    inset 1px 0px 0px rgba(0, 0, 0, 0.08);
-`;
+export const AllTweets = styled.div``;
 
 export const HomeH1 = styled.h1`
   font-family: "Roboto", sans-serif;
@@ -76,8 +74,7 @@ export const HomeH1 = styled.h1`
   line-height: 22px;
 
   color: #000000;
-  margin-left:32px;
-  margin-top:53px;
-  margin-bottom:27px;
+  margin-left: 32px;
+  margin-top: 53px;
+  margin-bottom: 27px;
 `;
-

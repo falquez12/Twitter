@@ -1,8 +1,8 @@
 import Trending from "./Trending/index";
 import Tweet from "./Tweet/index";
 import Sidebar from "../../common/Sidebar/index";
-import { ColNav } from "./timelineelements";
-import { Row, Col, Container } from "react-bootstrap";
+import { ColNav, Divmain, Divside } from "./timelineelements";
+import { Row, Col } from "react-bootstrap";
 import Searchbar from "../Search/searchbar.jsx";
 import Profile from "./Profile";
 import Notifications from "./Notifications";
@@ -11,9 +11,10 @@ import Messages from "./Messages";
 import Bookmarks from "./Bookmarks";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Metadata from "../../common/Metadata";
-
-
+import Navbar from "../../common/Navbar/index";
+import { useState } from "react";
 const Timeline = () => {
+  const [title, setTitle] = useState("");
   return (
     <BrowserRouter>
       <Metadata
@@ -22,41 +23,49 @@ const Timeline = () => {
         url="http://localhost:3000/home"
         img="img/twitterlogo.png"
       />
-      <Container>
-        <Row>
-          <ColNav xs={3}>
-            <div className="position-fixed">
-              <Sidebar></Sidebar>
+      <Divmain>
+        <ColNav>
+          <div className="position-fixed">
+            <Sidebar></Sidebar>
+          </div>
+        </ColNav>
+        <div style={{ widht: "990px", display: "flex" }}>
+          <div>
+            <div
+              style={{
+                position: "relative",
+                height: "3rem",
+              }}
+            >
+              <Navbar ComponentTitle={title}></Navbar>
             </div>
-          </ColNav>
-          <Col xs={6}>
             <Switch>
               <Route path="/home">
-                <Tweet></Tweet>
+                <Tweet setTitle={setTitle}></Tweet>
               </Route>
               <Route path="/profile">
-                <Profile></Profile>
+                <Profile setTitle={setTitle}></Profile>
               </Route>
               <Route path="/lists">
-                <Lists></Lists>
+                <Lists setTitle={setTitle}></Lists>
               </Route>
               <Route path="/bookmarks">
-                <Bookmarks></Bookmarks>
+                <Bookmarks setTitle={setTitle}></Bookmarks>
               </Route>
               <Route path="/messages">
-                <Messages></Messages>
+                <Messages setTitle={setTitle}></Messages>
               </Route>
               <Route path="/notifications">
-                <Notifications></Notifications>
+                <Notifications setTitle={setTitle}></Notifications>
               </Route>
             </Switch>
-          </Col>
-          <Col xs={3}>
+          </div>
+          <Divside>
             <Searchbar />
             <Trending></Trending>
-          </Col>
-        </Row>
-      </Container>
+          </Divside>
+        </div>
+      </Divmain>
     </BrowserRouter>
   );
 };

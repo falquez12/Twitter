@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { H1 } from "../../../lib/ui/text";
-
+import SelectIcon from "../../../lib/ui/icons/icons";
 export const SearchBar = styled.div`
   align-items: center;
   min-width: 120px;
@@ -16,6 +16,7 @@ export const Searchinput = styled.input`
   width: 280px;
   outline: none;
   border: 0px;
+  padding-left: 30px;
 `;
 
 export const Searchtext = styled(H1)`

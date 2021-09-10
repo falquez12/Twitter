@@ -38,7 +38,7 @@ const TweetElement = (props) => {
             src={tweetphoto}
             alt="tweetimage"
             width="100%"
-            height="285px"
+            height="300vh"
             style={{
               borderRadius: "12px",
               maxWidth: "574px",
