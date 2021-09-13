@@ -10,7 +10,7 @@ import {
 } from "./profileelements";
 import { BsCalendarFill } from "react-icons/bs";
 import Button from "../../../common/Button";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Profile = ({ setTitle }) => {
   useEffect(() => {
@@ -30,13 +30,12 @@ const Profile = ({ setTitle }) => {
           alt="tweetimage"
           width="100%"
           height="300vh"
-            style={{
-              borderRadius: "12px",
-              maxWidth: "574px",
-              display: "block",
-              objectFit: "cover",
-            }}
-          
+          style={{
+            width: "100%",
+            display: "block",
+            objectFit: "cover",
+            height: "25vh",
+          }}
         />
         <SpacedHorizontal>
           <H2Profile>jesus</H2Profile>

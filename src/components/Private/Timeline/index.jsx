@@ -29,7 +29,7 @@ const Timeline = () => {
           </div>
         </ColNav>
         <div style={{ widht: "990px", display: "flex" }}>
-          <div>
+          <div style={{ width: "600px" }}>
             <div
               style={{
                 position: "relative",
