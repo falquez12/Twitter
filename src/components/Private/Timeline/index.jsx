@@ -1,7 +1,7 @@
 import Trending from "./Trending/index";
 import Tweet from "./Tweet/index";
 import Sidebar from "../../common/Sidebar/index";
-import { ColNav, Divmain, Divside } from "./timelineelements";
+import { ColNav, Divmain, Divside, TimelineDiv } from "./timelineelements";
 import Searchbar from "../Search/searchbar.jsx";
 import Profile from "./Profile";
 import Notifications from "./Notifications";
@@ -12,8 +12,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Metadata from "../../common/Metadata";
 import Navbar from "../../common/Navbar/index";
 import { useState } from "react";
+
 const Timeline = () => {
   const [title, setTitle] = useState("");
+
   return (
     <BrowserRouter>
       <Metadata
@@ -25,11 +27,11 @@ const Timeline = () => {
       <Divmain>
         <ColNav>
           <div className="position-fixed">
-            <Sidebar></Sidebar>
+            <Sidebar active={title}></Sidebar>
           </div>
         </ColNav>
         <div style={{ widht: "990px", display: "flex" }}>
-          <div style={{ width: "600px" }}>
+          <TimelineDiv>
             <div
               style={{
                 position: "relative",
@@ -58,7 +60,7 @@ const Timeline = () => {
                 <Notifications setTitle={setTitle}></Notifications>
               </Route>
             </Switch>
-          </div>
+          </TimelineDiv>
           <Divside>
             <Searchbar />
             <Trending></Trending>

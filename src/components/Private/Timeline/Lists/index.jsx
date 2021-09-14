@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const Lists = ({ setTitle }) => {
   useEffect(() => {
-    setTitle("Bookmarks");
+    setTitle("Lists");
   });
   return (
     <>

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ColNav = styled.div`
   width: 225px;
-  margin-right: 30px;
   min-width: 68px;
   @media screen and (max-width: 1200px) {
     width: 80px;
@@ -29,4 +28,11 @@ export const Divside = styled.div`
     display: none;
   }
   margin-left: 30px;
+`;
+
+export const TimelineDiv = styled.div`
+  width: 600px;
+  @media screen and (max-width: 700px) {
+    width: 80vw;
+  }
 `;

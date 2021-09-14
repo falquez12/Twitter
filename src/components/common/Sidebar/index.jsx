@@ -11,7 +11,7 @@ import SelectIcon from "../../../lib/ui/icons/icons";
 import Addtweet from "../../../lib/ui/vectors/addtweet";
 import React, { useState, useEffect } from "react";
 
-const Side = () => {
+const Side = ({ active }) => {
   const [isMobile, setMobile] = useState(window.innerWidth > 1200);
 
   const updateMedia = () => {
@@ -37,12 +37,14 @@ const Side = () => {
   );
   return (
     <NavContainer style={{ overflowY: "auto", height: "calc(100vh )" }}>
-      <Divlogo>
+      <Divlogo style={{ paddingLeft: "10px" }}>
         <SelectIcon name={"Twitter"} />
       </Divlogo>
       {result.map(({ path, title }) => (
         <SidebarElements to={path}>
-          <DivElement>
+          <DivElement
+            style={{ color: active === title ? "#1da1f2" : "#333333" }}
+          >
             <SelectIcon name={title} />
             <PHome>{title}</PHome>
           </DivElement>

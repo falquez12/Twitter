@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 const Tweet = ({ setTitle }) => {
   useEffect(() => {
-    setTitle("Tweet");
+    setTitle("Home");
   });
 
   const elems = dummies.map((e) => {

@@ -8,7 +8,6 @@ export const NavContainer = styled.div`
 `;
 
 export const PHome = styled(P)`
-  color: #333333;
   text-align: left;
   font-size: 19px;
   line-height: 22px;
@@ -26,10 +25,17 @@ export const PHome = styled(P)`
 `;
 
 export const DivElement = styled.div`
-  margin: 1rem 0px;
+  margin: 0.3rem 0px;
   color: black;
   display: flex;
   align-items: center;
+  padding: 10px 10px 10px 10px;
+  transition: linear 0.25s;
+  &:hover {
+    border: 0px solid;
+    border-radius: 50px;
+    background-color: #e0dddd99;
+  }
   @media screen and (max-width: 1200px) {
     text-align: center;
     justify-content: center;
@@ -46,10 +52,4 @@ export const Divlogo = styled.div`
 
 export const SidebarElements = styled(Link)`
   text-decoration: none;
-  & :hover {
-    color: #1da1f2;
-  }
-  &:active {
-    color: red;
-  }
 `;
