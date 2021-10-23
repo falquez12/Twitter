@@ -1,9 +1,13 @@
+import { useState, useContext } from "react";
+import { loginUser } from "./../../../services/userService";
 import Button from "../../common/Button";
 import Form from "../../common/Form";
 import Input from "../../common/Input";
 import Vectorblue from "../../../lib/ui/vectors/vector_blue";
 import Metadata from "../../common/Metadata";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../context/AuthContext";
+import { useHistory } from "react-router";
 import {
   PLogin,
   ALogin,
@@ -14,8 +18,27 @@ import {
 } from "./loginelements";
 
 const Login = () => {
-  function HandleSubmit() {
-  }
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const auth = useContext(AuthContext);
+  const history = useHistory();
+  const handleLogin = (event) => {
+    console.log("username", username)
+    console.log("password", password)
+    event.preventDefault();
+    loginUser(username, password)
+    .then(data=>{
+        if(data.message === "ok") {
+            const user = data.data;
+            auth.login(user);
+            history.push("/home");
+        }
+    })
+    .catch((err)=>{
+        console.log("err",err);
+    });
+};
+  
 
   return (
     <StyledContainer>
@@ -37,6 +60,8 @@ const Login = () => {
             id="username"
             name="username"
             placeholder=""
+            setState={setUsername}
+            state={username}
           />
           <Input
             title="Password"
@@ -45,20 +70,20 @@ const Login = () => {
             id="password"
             name="password"
             placeholder=""
+            setState={setPassword}
+            state={password}
           />
         </Form>
         <Divforgot>
           <ALogin href="/recover">Forgot password?</ALogin>
         </Divforgot>
-        <Link to="/home">
           <Button
             fluid
             text="Login now"
             large
             primary
-            onClick={() => HandleSubmit()}
+            onClick={handleLogin}
           ></Button>
-        </Link>
         <Divaccount>
           <PLogin>
             Don't have an account?{" "}
