@@ -28,6 +28,24 @@ const post = async (endpoint, data) => {
             method: "POST",
             body: JSON.stringify(data),
             headers:{
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            }
+        };
+        const response = await fetch(url, options);
+        return response.json();
+    } catch(err){
+        return null;
+    }
+};
+
+const destroy = async (endpoint, data) => {
+    try {
+        const url = `${httpAPI}/${endpoint}`
+        const options = {
+            method: "DELETE",
+            body: JSON.stringify(data),
+            headers:{
                 'Content-Type': 'application/json'
             }
         };
@@ -38,4 +56,5 @@ const post = async (endpoint, data) => {
     }
 };
 
-export { get, post };
+
+export { get, post, destroy };
