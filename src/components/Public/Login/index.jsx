@@ -23,31 +23,30 @@ const Login = () => {
   const auth = useContext(AuthContext);
   const history = useHistory();
   const handleLogin = (event) => {
-    console.log("username", username)
-    console.log("password", password)
+    console.log("username", username);
+    console.log("password", password);
     event.preventDefault();
     loginUser(username, password)
-    .then(data=>{
-        if(data.message === "ok") {
-            const user = data.data;
-            auth.login(user);
-            history.push("/home");
+      .then((data) => {
+        if (data.message === "ok") {
+          const user = data.data;
+          auth.login(user);
+          history.push("/home");
         }
-    })
-    .catch((err)=>{
-        console.log("err",err);
-    });
-};
-  
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  };
 
   return (
     <StyledContainer>
       <Metadata
-            title="Login"
-            description="Log in the world of Twitter now so you can check the latest news your friends and the world are talking about."
-            url="http://localhost:3000/login"
-            img="img/twitterlogo.png"
-            />
+        title="Login"
+        description="Log in the world of Twitter now so you can check the latest news your friends and the world are talking about."
+        url="http://localhost:3000/login"
+        img="img/twitterlogo.png"
+      />
       <div>
         <Vectorblue />
         <PLogin>My twitter</PLogin>
@@ -77,13 +76,13 @@ const Login = () => {
         <Divforgot>
           <ALogin href="/recover">Forgot password?</ALogin>
         </Divforgot>
-          <Button
-            fluid
-            text="Login now"
-            large
-            primary
-            onClick={handleLogin}
-          ></Button>
+        <Button
+          fluid
+          text="Login now"
+          large
+          primary
+          onClick={handleLogin}
+        ></Button>
         <Divaccount>
           <PLogin>
             Don't have an account?{" "}
