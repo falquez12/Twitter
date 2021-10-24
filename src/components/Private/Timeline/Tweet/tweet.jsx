@@ -9,10 +9,11 @@ import {
 import { GoVerified } from "react-icons/go";
 import SelectIcon from "../../../../lib/ui/icons/icons";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useState, useEffect } from "react";
 
 const TweetElement = (props) => {
-  const { profilepicture, name, username, time, text, tweetphoto } = props;
-
+  const { profilepicture, name, username, time, text, id, tweetphoto, removeTweet } = props;
+  console.log("removeTweet",removeTweet)
   return (
     <>
       <Container>
@@ -52,7 +53,7 @@ const TweetElement = (props) => {
             <SelectIcon name={"MessageRounded"} />
             <SelectIcon name={"Retweet"} />
             <SelectIcon name={"Heart"} />
-            <SelectIcon name={"Inbox"} />
+            <button onClick={()=>removeTweet(id)} ><SelectIcon name={"Delete"} /></button>
           </TweetIcons>
         </TweetContainer>
       </Container>

@@ -1,24 +1,27 @@
 import { AllTweets } from "./tweetelements";
 import Elements from "./tweet";
 import Metadata from "../../../common/Metadata";
-
+import { useTweets } from "../../../../hooks/useTweets";
 import dummies from "./dummies";
+import NewTweet from "./../NewTweet";
 import { useEffect } from "react";
 
 const Tweet = ({ setTitle }) => {
+  const { tweets, removeTweet, addTweet } = useTweets();
   useEffect(() => {
     setTitle("Home");
   });
-
-  const elems = dummies.map((e) => {
+  const elems = tweets.map((tweet) => {
     return (
       <Elements
-        profilepicture={e.profilepicture}
-        name={e.name}
-        username={e.username}
-        time={e.time}
-        text={e.text}
-        tweetphoto={e.tweetphoto}
+        profilepicture={"https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9jcmVhdG9yLWltYWdlcy5wb2RjaGFzZXIuY29tL2Q0ZjhiYmNiNjUzYmFhNGQzY2YxNjUxMmI2ZmQzNTViLmpwZWc%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D"}
+        name={tweet.user.name}
+        username={tweet.user.username}
+        time={"14s"}
+        text={tweet.content}
+        id={tweet._id}
+        removeTweet={removeTweet}
+        tweetphoto={"https://i.pinimg.com/originals/bd/6c/0b/bd6c0bef4a473bfca44d1f6c83c95006.png"}
       ></Elements>
     );
   });
@@ -30,7 +33,10 @@ const Tweet = ({ setTitle }) => {
         url="http://localhost:3000/tweets"
         img="img/twitterlogo.png"
       />
-      <AllTweets>{elems}</AllTweets>
+      <AllTweets>
+        <NewTweet addTweet={addTweet} />
+        {elems}
+      </AllTweets>
     </>
   );
 };

@@ -8,6 +8,7 @@ import { BiMessageRounded } from "react-icons/bi";
 import { FaRetweet } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { HiInboxIn } from "react-icons/hi";
+import { AiFillDelete } from "react-icons/ai";
 
 const SelectIcon = ({ name }) => {
   const siz = 30;
@@ -34,6 +35,8 @@ const SelectIcon = ({ name }) => {
       return <FaRetweet size={tweetsize} color={tweetcolor} />;
     case "Heart":
       return <AiOutlineHeart size={tweetsize} color={tweetcolor} />;
+    case "Delete":
+      return <AiFillDelete size={tweetsize} color={tweetcolor} />;
     case "MessageRounded":
       return <BiMessageRounded size={tweetsize} color={tweetcolor} />;
     case "Inbox":
