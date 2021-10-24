@@ -4,7 +4,6 @@ const NewTweet = ({addTweet}) => {
     const [content, setContent] = useState("");
     const handleClick = (event) => {
         event.preventDefault();
-        console.log("handleclick")
         addTweet(content);
     }
 

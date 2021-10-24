@@ -9,7 +9,6 @@ const createTweets = async (content) => {
     const tweet = {
         content: content
     };
-    console.log("createtweets")
     const json = await post("tweets", tweet);
     return json;
 }
@@ -24,4 +23,4 @@ const deleteTweets = async (id) => {
 
 
 
-export { getTweets, createTweets }
+export { getTweets, createTweets, deleteTweets }

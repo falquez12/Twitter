@@ -46,7 +46,8 @@ const destroy = async (endpoint, data) => {
             method: "DELETE",
             body: JSON.stringify(data),
             headers:{
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'x-access-token': token
             }
         };
         const response = await fetch(url, options);

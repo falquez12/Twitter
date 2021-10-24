@@ -11,7 +11,6 @@ const Tweet = ({ setTitle }) => {
   useEffect(() => {
     setTitle("Home");
   });
-  console.log("DATE!",Date.now())
   const elems = tweets.map((tweet) => {
     return (
       <Elements
@@ -20,6 +19,8 @@ const Tweet = ({ setTitle }) => {
         username={tweet.user.username}
         time={"14s"}
         text={tweet.content}
+        id={tweet._id}
+        removeTweet={removeTweet}
         tweetphoto={"https://i.pinimg.com/originals/bd/6c/0b/bd6c0bef4a473bfca44d1f6c83c95006.png"}
       ></Elements>
     );
