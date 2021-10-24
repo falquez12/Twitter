@@ -3,7 +3,6 @@ import {getTweets, createTweets, deleteTweets, likeTweets } from "./../services/
 
 export const useTweets = () => {
     const [tweets, setTweets] = useState([]);
-
     const listTweets = async () => {
         const tweetList = await getTweets();
         const { data } = tweetList;
