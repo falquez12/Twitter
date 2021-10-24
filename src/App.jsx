@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { AuthContext } from "./context/AuthContext";
 import { useHistory } from "react-router";
 
+
 const App = () => {
   const { restricted, unrestricted } = routes;
   const { user, isLoggedIn } = useContext(AuthContext);

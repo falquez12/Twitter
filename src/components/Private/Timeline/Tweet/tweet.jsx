@@ -13,8 +13,21 @@ import { useState, useEffect } from "react";
 
 const TweetElement = (props) => {
   //const [likes, setLikes] = useState(0);
-  const { profilepicture, name, username, time, text, id, likes, tweetphoto, removeTweet, likeTweet } = props;
-
+  const {
+    profilepicture,
+    name,
+    username,
+    time,
+    text,
+    id,
+    likes,
+    tweetphoto,
+    removeTweet,
+    likeTweet,
+  } = props;
+  const handleclick = () => {
+    console.log("que pasa gente");
+  };
   return (
     <>
       <Container>
@@ -23,6 +36,7 @@ const TweetElement = (props) => {
           alt="profilepicture"
           height="40"
           width="40"
+          onClick={() => handleclick()}
         />
         <TweetContainer>
           <TweetName>
@@ -53,8 +67,13 @@ const TweetElement = (props) => {
           <TweetIcons>
             <SelectIcon name={"MessageRounded"} />
             <SelectIcon name={"Retweet"} />
-            {likes}<button onClick={()=>likeTweet(1,id)} ><SelectIcon name={"Heart"} /></button>
-            <button onClick={()=>removeTweet(id)} ><SelectIcon name={"Delete"} /></button>
+            {likes}
+            <button onClick={() => likeTweet(1, id)}>
+              <SelectIcon name={"Heart"} />
+            </button>
+            <button onClick={() => removeTweet(id)}>
+              <SelectIcon name={"Delete"} />
+            </button>
           </TweetIcons>
         </TweetContainer>
       </Container>
