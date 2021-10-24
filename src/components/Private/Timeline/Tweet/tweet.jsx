@@ -12,8 +12,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useState, useEffect } from "react";
 
 const TweetElement = (props) => {
-  const { profilepicture, name, username, time, text, id, tweetphoto, removeTweet } = props;
-  console.log("removeTweet",removeTweet)
+  //const [likes, setLikes] = useState(0);
+  const { profilepicture, name, username, time, text, id, likes, tweetphoto, removeTweet, likeTweet } = props;
+
   return (
     <>
       <Container>
@@ -52,7 +53,7 @@ const TweetElement = (props) => {
           <TweetIcons>
             <SelectIcon name={"MessageRounded"} />
             <SelectIcon name={"Retweet"} />
-            <SelectIcon name={"Heart"} />
+            {likes}<button onClick={()=>likeTweet(1,id)} ><SelectIcon name={"Heart"} /></button>
             <button onClick={()=>removeTweet(id)} ><SelectIcon name={"Delete"} /></button>
           </TweetIcons>
         </TweetContainer>

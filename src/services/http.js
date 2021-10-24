@@ -57,5 +57,23 @@ const destroy = async (endpoint, data) => {
     }
 };
 
+const put = async (endpoint, data) => {
+    try {
+        const url = `${httpAPI}/${endpoint}`
+        const options = {
+            method: "PUT",
+            body: JSON.stringify(data),
+            headers:{
+                'Content-Type': 'application/json',
+                'x-access-token': token
+            }
+        };
+        const response = await fetch(url, options);
+        return response.json();
+    } catch(err){
+        return null;
+    }
+};
 
-export { get, post, destroy };
+
+export { get, post, destroy, put };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {getTweets, createTweets, deleteTweets } from "./../services/tweetService";
+import {getTweets, createTweets, deleteTweets, likeTweets } from "./../services/tweetService";
 
 export const useTweets = () => {
     const [tweets, setTweets] = useState([]);
@@ -23,10 +23,16 @@ export const useTweets = () => {
         const result = await deleteTweets(id)
         listTweets();
     };
+
+    const likeTweet = async (like, tweetId) => {
+        const result = await likeTweets(like,tweetId)
+        listTweets();
+    };
     
     return {
         tweets,
         removeTweet,
-        addTweet
+        addTweet,
+        likeTweet
     }
 }

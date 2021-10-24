@@ -7,7 +7,7 @@ import NewTweet from "./../NewTweet";
 import { useEffect } from "react";
 
 const Tweet = ({ setTitle }) => {
-  const { tweets, removeTweet, addTweet } = useTweets();
+  const { tweets, removeTweet, addTweet, likeTweet } = useTweets();
   useEffect(() => {
     setTitle("Home");
   });
@@ -20,7 +20,9 @@ const Tweet = ({ setTitle }) => {
         time={"14s"}
         text={tweet.content}
         id={tweet._id}
+        likes={tweet.likes}
         removeTweet={removeTweet}
+        likeTweet={likeTweet}
         tweetphoto={"https://i.pinimg.com/originals/bd/6c/0b/bd6c0bef4a473bfca44d1f6c83c95006.png"}
       ></Elements>
     );
