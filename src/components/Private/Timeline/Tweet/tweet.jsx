@@ -9,6 +9,7 @@ import {
 import { GoVerified } from "react-icons/go";
 import SelectIcon from "../../../../lib/ui/icons/icons";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const TweetElement = (props) => {
@@ -39,31 +40,37 @@ const TweetElement = (props) => {
           onClick={() => handleclick()}
         />
         <TweetContainer>
-          <TweetName>
-            <p style={{ fontWeight: "600" }}>{name}</p>
-            <p>
-              <GoVerified />
-            </p>
-            <p>{username}</p>
-            <p>.</p>
-            <p>{time}</p>
-          </TweetName>
-
-          <TweetText>{text}</TweetText>
-
-          <LazyLoadImage
-            src={tweetphoto}
-            alt="tweetimage"
-            width="100%"
-            height="300vh"
-            style={{
-              borderRadius: "12px",
-              maxWidth: "574px",
-              display: "block",
-              objectFit: "cover",
+          <Link
+            to={{
+              pathname: `/tweet/${id}`,
             }}
-          />
+            style={{ textDecoration: 'none',color: 'black'}}
+          >
+            <TweetName>
+              <p style={{ fontWeight: "600" }}>{name}</p>
+              <p>
+                <GoVerified />
+              </p>
+              <p>{username}</p>
+              <p>.</p>
+              <p>{time}</p>
+            </TweetName>
 
+            <TweetText>{text}</TweetText>
+
+            <LazyLoadImage
+              src={tweetphoto}
+              alt="tweetimage"
+              width="100%"
+              height="300vh"
+              style={{
+                borderRadius: "12px",
+                maxWidth: "574px",
+                display: "block",
+                objectFit: "cover",
+              }}
+            />
+          </Link>
           <TweetIcons>
             <SelectIcon name={"MessageRounded"} />
             <SelectIcon name={"Retweet"} />

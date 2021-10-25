@@ -1,11 +1,11 @@
 import { ElementContainer, ElementH1, ElementWord } from "./trendingelements";
 const TrendingCard = (props) => {
-  const { trending, hashtag, ntweets } = props;
+  const { trending, text, ntweets } = props;
   return (
     <>
       <ElementContainer>
         <ElementWord>{trending}</ElementWord>
-        <ElementH1>{hashtag}</ElementH1>
+        <ElementH1>{text}</ElementH1>
         <ElementWord>{ntweets}</ElementWord>
       </ElementContainer>
     </>
