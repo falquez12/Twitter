@@ -5,6 +5,7 @@ export const NewTweetContainer = styled(Col)`
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #e6e6e6;
 `;
 
 export const Wrapper = styled.div`
@@ -13,7 +14,6 @@ export const Wrapper = styled.div`
   width: 100%;
   border-radius: 5px;
   padding: 25px 25px 15px 25px;
-  box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
 `;
 
 export const InputBox = styled.div`
@@ -46,7 +46,16 @@ export const Bottom = styled.div`
   display: flex;
   margin-top: 13px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 `;
 
+export const Icons = styled.div`
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+`;
 

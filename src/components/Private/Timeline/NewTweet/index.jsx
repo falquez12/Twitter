@@ -5,8 +5,10 @@ import {
   StyledTextArea,
   Bottom,
   Wrapper,
+  Icons
 } from "./newtweetelements.jsx";
 import Button from "../../../common/Button";
+import SelectIcon from "../../../../lib/ui/icons/icons";
 
 const NewTweet = ({ addTweet }) => {
   const [content, setContent] = useState("");
@@ -28,6 +30,11 @@ const NewTweet = ({ addTweet }) => {
             ></StyledTextArea>
           </InputBox>
           <Bottom>
+            <Icons>
+                <SelectIcon name={"Emoji"} />
+                <SelectIcon name={"Gif"} />
+                <SelectIcon name={"Image"} />
+            </Icons>
             <Button
               text="Send Tweet"
               primary
