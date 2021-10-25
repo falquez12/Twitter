@@ -23,8 +23,6 @@ const Login = () => {
   const auth = useContext(AuthContext);
   const history = useHistory();
   const handleLogin = (event) => {
-    console.log("username", username);
-    console.log("password", password);
     event.preventDefault();
     loginUser(username, password)
       .then((data) => {

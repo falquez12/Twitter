@@ -30,5 +30,32 @@ const likeTweets = async (like, tweetId) => {
     return json;
 }
 
+const createComment = async (comment, tweetId) => {
+    const tweet = {
+        comment: comment,
+        tweetId: tweetId
+    };
+    console.log("createComment")
+    const json = await post("tweets/comments", tweet);
+    return json;
+}
 
-export { getTweets, createTweets, deleteTweets, likeTweets }
+const deleteComment = async (commentId, tweetId) => {
+    const tweet = {
+        tweetId: tweetId,
+        commentId: commentId
+    };
+    console.log("deleteComment")
+    const json = await destroy("tweets/comments", tweet);
+    return json;
+}
+
+const getExternalTweets = async (username) => {
+    const json = await get(`/tweet/external/${username}`);
+    return json;
+}
+
+
+
+
+export { getTweets, createTweets, deleteTweets, likeTweets, createComment, deleteComment, getExternalTweets }

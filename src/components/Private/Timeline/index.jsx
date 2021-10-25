@@ -1,6 +1,6 @@
 import Trending from "./Trending/index";
 import Tweet from "./Tweet/index";
-import TweetPage from "./Tweet/tweetpage.jsx";
+import TweetPage from "./TweetPage/index.jsx";
 import Sidebar from "../../common/Sidebar/index";
 import { ColNav, Divmain, Divside, TimelineDiv } from "./timelineelements";
 import Searchbar from "../Search/searchbar.jsx";

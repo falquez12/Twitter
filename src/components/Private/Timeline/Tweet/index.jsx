@@ -9,11 +9,13 @@ import { useEffect } from "react";
 
 const Tweet = ({ setTitle }) => {
   const { tweets, removeTweet, addTweet, likeTweet } = useTweets();
+  console.log("tweetsxd1",tweets)
   useEffect(() => {
     setTitle("Home");
   });
   const elems = tweets.map((tweet) => {
     return (
+      
       <Link
         to={{
           pathname: `/tweet/${tweet._id}`
