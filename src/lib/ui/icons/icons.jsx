@@ -9,6 +9,10 @@ import { FaRetweet } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { HiInboxIn } from "react-icons/hi";
 import { AiFillDelete } from "react-icons/ai";
+import { HiOutlineEmojiHappy } from "react-icons/hi";
+import { AiOutlineFileGif } from "react-icons/ai";
+import { BsImage } from "react-icons/bs";
+
 
 const SelectIcon = ({ name }) => {
   const siz = 30;
@@ -43,6 +47,12 @@ const SelectIcon = ({ name }) => {
       return <HiInboxIn size={tweetsize} color={tweetcolor} />;
     case "Search":
       return <FiSearch size={tweetsize} color={tweetcolor} />;
+    case "Emoji":
+        return <HiOutlineEmojiHappy size={tweetsize} color={tweetcolor} />;
+    case "Gif":
+        return <AiOutlineFileGif size={tweetsize} color={tweetcolor} />;
+    case "Image":
+        return <BsImage size={tweetsize} color={tweetcolor} />;
     default:
       return <></>;
   }
