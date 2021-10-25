@@ -31,6 +31,8 @@ export const InputBox = styled.div`
 export const StyledTextArea = styled.textarea`
   min-height: 80px;
   max-height: 80px;
+  max-width: 580px;
+  width: 100%;
   overflow-y: auto;
   border: none;
   overflow: auto;
