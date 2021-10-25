@@ -43,7 +43,7 @@ const NewComment = ({ tweetId, addComment }) => {
               onClick={handleClick}
               type="button"
             >
-              Send Tweet
+              Reply
             </Button>
           </Bottom>
         </form>

@@ -74,13 +74,13 @@ const TweetElement = (props) => {
           <TweetIcons>
             <SelectIcon name={"MessageRounded"} />
             <SelectIcon name={"Retweet"} />
-            {likes}
-            <button onClick={() => likeTweet(1, id)}>
+            <div onClick={() => likeTweet(1, id)}>
               <SelectIcon name={"Heart"} />
-            </button>
-            <button onClick={() => removeTweet(id)}>
+              {likes}
+            </div>
+            <div onClick={() => removeTweet(id)}>
               <SelectIcon name={"Delete"} />
-            </button>
+            </div>
           </TweetIcons>
         </TweetContainer>
       </Container>
