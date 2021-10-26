@@ -8,6 +8,7 @@ import Metadata from "../../common/Metadata";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext";
 import { useHistory } from "react-router";
+import { AlertLogin } from "../../common/Alert";
 import {
   PLogin,
   ALogin,
@@ -20,8 +21,12 @@ import {
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
   const auth = useContext(AuthContext);
   const history = useHistory();
+  function handleClick() {
+    setShowAlert(false);
+  }
   const handleLogin = (event) => {
     console.log("username", username);
     console.log("password", password);
@@ -32,6 +37,8 @@ const Login = () => {
           const user = data.data;
           auth.login(user);
           history.push("/home");
+        } else if (data.message != "ok") {
+          setShowAlert(true);
         }
       })
       .catch((err) => {
@@ -48,6 +55,9 @@ const Login = () => {
         img="img/twitterlogo.png"
       />
       <div>
+        <div style={{ width: "100%" }}>
+          {showAlert ? <AlertLogin handleClick={handleClick} /> : null}
+        </div>
         <Vectorblue />
         <PLogin>My twitter</PLogin>
         <H1Login>Login to your account</H1Login>

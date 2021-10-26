@@ -8,6 +8,7 @@ export const StyledInput = styled.input`
   border: 1px solid #e8e8e8;
   box-sizing: border-box;
   border-radius: 5px;
+  padding: 5px 10px;
 `;
 
 export const StyledLabel = styled.label`

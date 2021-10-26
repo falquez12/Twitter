@@ -9,6 +9,7 @@ import { FaRetweet } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { HiInboxIn } from "react-icons/hi";
 import { AiFillDelete } from "react-icons/ai";
+import { IoMdClose } from "react-icons/io";
 
 const SelectIcon = ({ name }) => {
   const siz = 30;
@@ -43,6 +44,8 @@ const SelectIcon = ({ name }) => {
       return <HiInboxIn size={tweetsize} color={tweetcolor} />;
     case "Search":
       return <FiSearch size={tweetsize} color={tweetcolor} />;
+    case "Close":
+      return <IoMdClose size={28} color={"#ffff"} />;
     default:
       return <></>;
   }
