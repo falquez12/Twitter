@@ -28,8 +28,6 @@ const Login = () => {
     setShowAlert(false);
   }
   const handleLogin = (event) => {
-    console.log("username", username);
-    console.log("password", password);
     event.preventDefault();
     loginUser(username, password)
       .then((data) => {

@@ -48,6 +48,11 @@ const routes = {
       component: Timeline,
     },
     {
+      title: "Tweet",
+      path: "/tweet/:id",
+      component: Timeline,
+    },
+    {
       title: "Search",
       path: "/search",
       component: Search,

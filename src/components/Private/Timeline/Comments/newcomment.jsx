@@ -1,32 +1,32 @@
 import { useState } from "react";
 import {
-  NewTweetContainer,
+  NewCommentContainer,
   InputBox,
   StyledTextArea,
   Bottom,
   Wrapper,
-  Icons
-} from "./newtweetelements.jsx";
+  Icons,
+} from "./newcommentelements.jsx";
 import Button from "../../../common/Button";
 import SelectIcon from "../../../../lib/ui/icons/icons";
 
-const NewTweet = ({ addTweet }) => {
-  const [content, setContent] = useState("");
+const NewComment = ({ tweetId, addComment }) => {
+  const [comment, setComment] = useState("");
   const handleClick = (event) => {
     event.preventDefault();
-    addTweet(content);
+    addComment(comment, tweetId);
   };
 
   return (
-    <NewTweetContainer>
+    <NewCommentContainer>
       <Wrapper>
         <form>
           <InputBox>
             <StyledTextArea
               name="content"
               id="content"
-              placeholder="What's happening ?"
-              onChange={(event) => setContent(event.target.value)}
+              placeholder="Tweet your comment"
+              onChange={(event) => setComment(event.target.value)}
             ></StyledTextArea>
           </InputBox>
           <Bottom>
@@ -36,20 +36,20 @@ const NewTweet = ({ addTweet }) => {
                 <SelectIcon name={"Image"} />
             </Icons>
             <Button
-              text="Send Tweet"
+              text="Reply"
               primary
               fluid
               round
               onClick={handleClick}
               type="button"
             >
-              Send Tweet
+              Reply
             </Button>
           </Bottom>
         </form>
       </Wrapper>
-    </NewTweetContainer>
+    </NewCommentContainer>
   );
 };
 
-export default NewTweet;
+export default NewComment;
