@@ -1,6 +1,7 @@
 import Trending from "./Trending/index";
 import Tweet from "./Tweet/index";
 import TweetPage from "./TweetPage/index.jsx";
+import TrendingPage from "./Trending/trendingpage.jsx";
 import Sidebar from "../../common/Sidebar/index";
 import { ColNav, Divmain, Divside, TimelineDiv } from "./timelineelements";
 import Searchbar from "../Search/searchbar.jsx";
@@ -46,6 +47,9 @@ const Timeline = () => {
               </Route>
               <Route path="/tweet/:id">
                 <TweetPage setTitle={setTitle}></TweetPage>
+              </Route>
+              <Route path="/trending">
+                <TrendingPage setTitle={setTitle}></TrendingPage>
               </Route>
               <Route path="/profile">
                 <Profile setTitle={setTitle}></Profile>

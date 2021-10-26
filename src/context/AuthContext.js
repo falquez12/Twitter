@@ -12,7 +12,6 @@ const AuthProvider = (props) => {
 
   const login = (user) => {
     setUser(user);
-    console.log(user);
     localStorage.setItem("user", JSON.stringify(user));
   };
 

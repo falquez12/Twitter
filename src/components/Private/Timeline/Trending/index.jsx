@@ -41,6 +41,7 @@ const Trending = () => {
           if (index < 5) {
             return (
               <TrendingCard
+                key={index}
                 trending={index + 1 + ".Trending"}
                 hashtag={"#" + externalUsername}
                 content={t?.text}

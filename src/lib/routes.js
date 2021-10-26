@@ -3,8 +3,6 @@ import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Timeline from "./../components/Private/Timeline";
 import Recover from "./../components/Public/Recover";
-
-import Search from "../components/Private/Search";
 const routes = {
   restricted: [
     {
@@ -15,47 +13,47 @@ const routes = {
     {
       title: "Trending",
       path: "/trending",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Notifications",
       path: "/notifications",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Messages",
       path: "/Messages",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Bookmarks",
       path: "/bookmarks",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Lists",
       path: "/lists",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Profile",
       path: "/profile",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Tweet",
       path: "/Tweet",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Tweet",
       path: "/tweet/:id",
-      component: Search,
+      component: Timeline,
     },
     {
       title: "Search",
       path: "/search",
-      component: Search,
+      component: Timeline,
     },
   ],
   unrestricted: [

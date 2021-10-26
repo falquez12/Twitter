@@ -47,8 +47,8 @@ const Side = ({ active }) => {
       <Divlogo style={{ paddingLeft: "10px" }}>
         <SelectIcon name={"Twitter"} />
       </Divlogo>
-      {result.map(({ path, title }) => (
-        <SidebarElements to={path}>
+      {result.map(({ path, title, index }) => (
+        <SidebarElements key={index} to={path}>
           <DivElement
             style={{ color: active === title ? "#1da1f2" : "#333333" }}
           >

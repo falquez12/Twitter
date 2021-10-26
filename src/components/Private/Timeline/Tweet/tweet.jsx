@@ -11,17 +11,15 @@ import SelectIcon from "../../../../lib/ui/icons/icons";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import {useContext} from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../../../context/AuthContext";
 
 const TweetElement = (props) => {
   const { user } = useContext(AuthContext);
-  console.log("user1",user)
   const {
     profilepicture,
     name,
     username,
-    userId,
     time,
     text,
     id,
@@ -31,15 +29,14 @@ const TweetElement = (props) => {
     likeTweet,
   } = props;
 
-
-  const isTweetUser = () =>{ 
-    return JSON.parse(user).username === username
+  const isTweetUser = () => {
+    try {
+      const obj = user;
+      const strObj= JSON.stringify(obj);
+      const jsonUser = JSON.parse(strObj);
+      return jsonUser?.username === username;
+    } catch (err) {console.log("error",err)}
   };
-
-  console.log("isTweetUser", isTweetUser())
-  console.log("user.username", user?.username)
-  console.log("user parse",JSON.parse(user))
-  console.log("username", username)
   return (
     <>
       <Container>
@@ -54,7 +51,7 @@ const TweetElement = (props) => {
             to={{
               pathname: `/tweet/${id}`,
             }}
-            style={{ textDecoration: 'none',color: 'black'}}
+            style={{ textDecoration: "none", color: "black" }}
           >
             <TweetName>
               <p style={{ fontWeight: "600" }}>{name}</p>
@@ -89,12 +86,12 @@ const TweetElement = (props) => {
               {likes}
             </div>
             {isTweetUser() ? (
-                <div onClick={() => removeTweet(id)}>
+              <div onClick={() => removeTweet(id)}>
                 <SelectIcon name={"Delete"} />
               </div>
-              ) : (
-                <></>
-              )}
+            ) : (
+              <></>
+            )}
           </TweetIcons>
         </TweetContainer>
       </Container>

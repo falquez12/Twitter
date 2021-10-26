@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Swal from 'sweetalert2'
-import {getTweets, createTweets, deleteTweets, likeTweets, createComment, deleteComment, externalTweets } from "./../services/tweetService";
+import {getTweets, trendingTweets, createTweets, deleteTweets, likeTweets, createComment, deleteComment, externalTweets } from "./../services/tweetService";
 
 export const useTweets = () => {
     const [tweets, setTweets] = useState([]);
@@ -54,22 +54,28 @@ export const useTweets = () => {
     };
 
     const likeTweet = async (like, tweetId) => {
-        const result = await likeTweets(like,tweetId)
+        await likeTweets(like,tweetId)
         listTweets();
     };
 
     const addComment = async (comment, tweetId) => {
-        const result = await createComment(comment, tweetId);
+        await createComment(comment, tweetId);
         listTweets();
     };
 
     const removeComment = async (tweetId, commentId) => {
-        const result = await deleteComment(tweetId, commentId)
+        await deleteComment(tweetId, commentId)
         listTweets();
     };
 
     const getExternalTweets = async (username) => {
         const result = await externalTweets(username)
+        return result
+    };
+
+    const getTrendingTweets = async () => {
+        const result = await trendingTweets();
+        listTweets();
         return result
     };
     
@@ -81,6 +87,7 @@ export const useTweets = () => {
         addComment,
         removeComment,
         getExternalTweets,
+        getTrendingTweets,
         listTweets
     }
 }

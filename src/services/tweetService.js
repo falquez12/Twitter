@@ -1,7 +1,12 @@
-import { post, get, destroy, put } from "./http";
+import { post, get, destroy } from "./http";
 
 const getTweets = async () => {
     const json = await get("tweets");
+    return json;
+}
+
+const trendingTweets = async () => {
+    const json = await get("tweets?page=1&limit=20");
     return json;
 }
 
@@ -53,4 +58,4 @@ const externalTweets = async (username) => {
     return json;
 }
 
-export { getTweets, createTweets, deleteTweets, likeTweets, createComment, deleteComment, externalTweets }
+export { getTweets, trendingTweets, createTweets, deleteTweets, likeTweets, createComment, deleteComment, externalTweets }

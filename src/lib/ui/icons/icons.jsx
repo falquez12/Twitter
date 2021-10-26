@@ -48,7 +48,7 @@ const SelectIcon = ({ name }) => {
     case "Search":
       return <FiSearch size={tweetsize} color={tweetcolor} />;
     case "Close":
-      return <IoMdClose size={28} color={"#ffff"} />;
+      return <IoMdClose style={{cursor:'pointer'}} size={28} color={"#ffff"} />;
     case "Emoji":
       return <HiOutlineEmojiHappy size={tweetsize} color={tweetcolor} />;
     case "Gif":
