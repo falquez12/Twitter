@@ -11,13 +11,17 @@ import SelectIcon from "../../../../lib/ui/icons/icons";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import {useContext} from "react";
+import { AuthContext } from "../../../../context/AuthContext";
 
 const TweetElement = (props) => {
-  //const [likes, setLikes] = useState(0);
+  const { user } = useContext(AuthContext);
+  console.log("user1",user)
   const {
     profilepicture,
     name,
     username,
+    userId,
     time,
     text,
     id,
@@ -26,9 +30,16 @@ const TweetElement = (props) => {
     removeTweet,
     likeTweet,
   } = props;
-  const handleclick = () => {
-    console.log("que pasa gente");
+
+
+  const isTweetUser = () =>{ 
+    return JSON.parse(user).username === username
   };
+
+  console.log("isTweetUser", isTweetUser())
+  console.log("user.username", user?.username)
+  console.log("user parse",JSON.parse(user))
+  console.log("username", username)
   return (
     <>
       <Container>
@@ -37,7 +48,6 @@ const TweetElement = (props) => {
           alt="profilepicture"
           height="40"
           width="40"
-          onClick={() => handleclick()}
         />
         <TweetContainer>
           <Link
@@ -78,9 +88,13 @@ const TweetElement = (props) => {
               <SelectIcon name={"Heart"} />
               {likes}
             </div>
-            <div onClick={() => removeTweet(id)}>
-              <SelectIcon name={"Delete"} />
-            </div>
+            {isTweetUser() ? (
+                <div onClick={() => removeTweet(id)}>
+                <SelectIcon name={"Delete"} />
+              </div>
+              ) : (
+                <></>
+              )}
           </TweetIcons>
         </TweetContainer>
       </Container>

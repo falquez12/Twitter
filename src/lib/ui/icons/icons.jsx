@@ -36,13 +36,13 @@ const SelectIcon = ({ name }) => {
     case "Messages":
       return <FiMail size={siz} />;
     case "Retweet":
-      return <FaRetweet size={tweetsize} color={tweetcolor} />;
+      return <FaRetweet style={{cursor:'pointer'}} size={tweetsize} color={tweetcolor} />;
     case "Heart":
-      return <AiOutlineHeart size={tweetsize} color={tweetcolor} />;
+      return <AiOutlineHeart style={{cursor:'pointer'}} size={tweetsize} color={tweetcolor} />;
     case "Delete":
-      return <AiFillDelete size={tweetsize} color={tweetcolor} />;
+      return <AiFillDelete style={{cursor:'pointer'}} size={tweetsize} color={tweetcolor} />;
     case "MessageRounded":
-      return <BiMessageRounded size={tweetsize} color={tweetcolor} />;
+      return <BiMessageRounded style={{cursor:'pointer'}} size={tweetsize} color={tweetcolor} />;
     case "Inbox":
       return <HiInboxIn size={tweetsize} color={tweetcolor} />;
     case "Search":

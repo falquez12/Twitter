@@ -6,34 +6,41 @@ import dummies from "./dummies";
 import { useState, useEffect } from "react";
 
 const Trending = () => {
-  // { tweets, getExternalTweets } = useTweets();
-
-  const externalUsername = "joebiden";
+  const { getExternalTweets } = useTweets();
   const [externalTweets, setExternalTweets] = useState({});
+  const externalUsername = "joebiden";
 
   useEffect(() => {
-  //  try {
-  //    fetch(
-  //      "https://api-twitter-frontend.herokuapp.com/api/tweets/external/joebiden",
-  //      {
-  //        method: "GET",
-  //        headers: new Headers({
-  //          "x-access-token":
-  //            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTc0NTMxNjIxOGFhMDAwMTYyNWZjNGEiLCJpYXQiOjE2MzUwMjU2NDd9.6kqoc6Akk2NJdWJYWg-T82fe-B8SlCuPXsZI1QwZweE",
-  //        }),
-  //      }
-  //    )
-  //      .then((res) => res.json())
-  //      .then((response) => {
-  //        setExternalTweets(response.items);
-  //      })
-  //      .catch((error) => console.log(error));
-  //  } catch (error) {
-  //    console.log("ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR,error".error);
-  //  }
+    //  try {
+    //    fetch(
+    //      "https://api-twitter-frontend.herokuapp.com/api/tweets/external/joebiden",
+    //      {
+    //        method: "GET",
+    //        headers: new Headers({
+    //          "x-access-token":
+    //            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTc0NTMxNjIxOGFhMDAwMTYyNWZjNGEiLCJpYXQiOjE2MzUwMjU2NDd9.6kqoc6Akk2NJdWJYWg-T82fe-B8SlCuPXsZI1QwZweE",
+    //        }),
+    //      }
+    //    )
+    //      .then((res) => res.json())
+    //      .then((response) => {
+    //        setExternalTweets(response.items);
+    //      })
+    //      .catch((error) => console.log(error));
+    //  } catch (error) {
+    //    console.log("ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR,error".error);
+    //  }
+    //async function doSomething() {
+    //  let result = await getExternalTweets(externalUsername);
+    //  return result;
+    //}
+    getExternalTweets(externalUsername).then(function(result) {
+      console.log("result",result)
+    setExternalTweets(result);
+    });
   }, []);
 
-  //console.log("test", externalTweets);
+  console.log("test", externalTweets);
   const elem = dummies.map((e, index) => {
     return (
       <TrendingCard
