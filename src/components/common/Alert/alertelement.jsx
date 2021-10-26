@@ -11,7 +11,7 @@ const fadein = keyframes`
 export const Div = styled.div`
   background: #1da1f2;
   position: absolute;
-  top: 10vh;
+  top: 5vh;
   color: white;
   display: flex;
   justify-content: center;
