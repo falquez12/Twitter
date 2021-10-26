@@ -10,7 +10,7 @@ const AlertLogin = ({ handleClick }) => {
 
   return (
     <Div>
-      <p>Contrasena Errada</p>
+      <p>Usuario o contrasena incorrecto</p>
       <div onClick={handleClick}>
         <SelectIcon name="Close"></SelectIcon>
       </div>
