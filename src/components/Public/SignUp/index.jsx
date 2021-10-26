@@ -2,6 +2,12 @@ import Button from "../../common/Button";
 import Form from "../../common/Form";
 import Input from "../../common/Input";
 import Vectorblue from "../../../lib/ui/vectors/vector_blue";
+import { useState, useContext } from "react";
+import { singupUser, loginUser } from "./../../../services/userService";
+import { AuthContext } from "../../../context/AuthContext";
+import { useHistory } from "react-router";
+import { AlertSingUp } from "../../common/Alert";
+
 import {
   PLogin,
   ALogin,
@@ -12,21 +18,67 @@ import {
 } from "./signupelements";
 import Metadata from "../../common/Metadata";
 
-
 const SignUp = () => {
-  function HandleSubmit() {
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setpasswordConfirmation] = useState("");
+  const [email, setEmail] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const auth = useContext(AuthContext);
+  const history = useHistory();
+  function handleClick() {
+    setShowAlert(false);
   }
+  const loginusertohome = (username, password) => {
+    loginUser(username, password)
+      .then((data) => {
+        if (data.message === "ok") {
+          const user = data.data;
+          auth.login(user);
+          history.push("/home");
+        }
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
+  };
+  const HandleSingUp = (event) => {
+    const userInfo = {
+      name: name,
+      username: username,
+      password: password,
+      passwordConfirmation: passwordConfirmation,
+      email: email,
+    };
+    event.preventDefault();
+    singupUser(userInfo)
+      .then((data) => {
+        if (data.active) {
+          loginusertohome(username, password);
+        } else {
+          setShowAlert(true);
+        }
+      })
+      .catch((err) => {
+        console.log("fallo todo");
+        console.log("err", err);
+      });
+  };
 
   return (
     <div style={{ height: "100%" }}>
       <StyledContainer>
-      <Metadata
-            title="SignUp"
-            description="Sign Up in Twitter and be part of the most relevant social network in the world."
-            url="http://localhost:3000/signup"
-            img="img/twitterlogo.png"
-            />
+        <Metadata
+          title="SignUp"
+          description="Sign Up in Twitter and be part of the most relevant social network in the world."
+          url="http://localhost:3000/signup"
+          img="img/twitterlogo.png"
+        />
         <div>
+          <div style={{ width: "100%" }}>
+            {showAlert ? <AlertSingUp handleClick={handleClick} /> : null}
+          </div>
           <Vectorblue />
           <PLogin>My twitter</PLogin>
           <H1Login>Create your account</H1Login>
@@ -37,7 +89,8 @@ const SignUp = () => {
               type="text"
               id="name"
               name="name"
-              placeholder=""
+              setState={setName}
+              state={name}
             />
             <Input
               key="username"
@@ -45,7 +98,8 @@ const SignUp = () => {
               type="text"
               id="username"
               name="username"
-              placeholder=""
+              setState={setUsername}
+              state={username}
             />
             <Input
               key="email"
@@ -53,7 +107,8 @@ const SignUp = () => {
               type="email"
               id="email"
               name="email"
-              placeholder=""
+              setState={setEmail}
+              state={email}
             />
             <Input
               title="Password"
@@ -61,7 +116,8 @@ const SignUp = () => {
               type="password"
               id="password"
               name="password"
-              placeholder=""
+              setState={setPassword}
+              state={password}
             />
             <Input
               key="confirm"
@@ -69,7 +125,8 @@ const SignUp = () => {
               type="password"
               id="confirm"
               name="confirm"
-              placeholder=""
+              setState={setpasswordConfirmation}
+              state={passwordConfirmation}
             />
           </Form>
           <DivBoton>
@@ -78,7 +135,7 @@ const SignUp = () => {
               text="Sign Up"
               large
               primary
-              onClick={() => HandleSubmit()}
+              onClick={HandleSingUp}
             ></Button>
           </DivBoton>
           <Divaccount>

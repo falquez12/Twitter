@@ -16,7 +16,6 @@ import { useState } from "react";
 
 const Timeline = () => {
   const [title, setTitle] = useState("");
-
   return (
     <BrowserRouter>
       <Metadata
@@ -67,7 +66,7 @@ const Timeline = () => {
           </TimelineDiv>
           <Divside>
             <Searchbar />
-            <Trending></Trending>
+            <Trending/>
           </Divside>
         </div>
       </Divmain>

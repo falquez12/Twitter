@@ -15,42 +15,42 @@ const routes = {
     {
       title: "Trending",
       path: "/trending",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Notifications",
       path: "/notifications",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Messages",
       path: "/Messages",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Bookmarks",
       path: "/bookmarks",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Lists",
       path: "/lists",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Profile",
       path: "/profile",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Tweet",
       path: "/Tweet",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Tweet",
       path: "/tweet/:id",
-      component: Timeline,
+      component: Search,
     },
     {
       title: "Search",

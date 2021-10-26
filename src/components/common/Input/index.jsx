@@ -12,7 +12,7 @@ const Input = (props) => {
         name={name}
         placeholder={title}
         value={state}
-        onChange={event=>setState(event.target.value)}
+        onChange={(event) => setState(event.target.value)}
         {...rest}
       />
     </div>
