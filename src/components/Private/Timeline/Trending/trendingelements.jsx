@@ -7,7 +7,7 @@ export const TrendingContainer = styled(Col)`
   padding: 14px 0px;
   position: static;
   width: 280px;
-  height: 600px;
+  height: 950px;
   left: 0px;
   top: 64px;
   background: #f6f8fa;
@@ -53,12 +53,20 @@ export const ElementContainer = styled(Col)`
   display: flex;
   flex-direction: column;
   width: 270px;
-  height: 81px;
+  height: 170px;
   padding-top: 10px;
   padding-left: 20px;
   margin-right: 0px;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+`;
+
+export const ElementContent = styled(Col)`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #828282;
 `;
 
 export const ElementWord = styled(Col)`
