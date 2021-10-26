@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom'
 const TweetPage = ({ setTitle }) => {
     const { tweets, removeTweet, addComment, likeTweet, removeComment } = useTweets();
     const { id } = useParams()
-    console.log("tweetsxd1",tweets)
+    console.log("tweets",tweets)
     useEffect(() => {
         setTitle("Tweet");
     });
