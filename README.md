@@ -4,6 +4,11 @@
  -  Jesus Romero Barros - JesusRomeroB
  -  Sebastian Santander Fontalvo - sesantander
 
+Funcionalidades no realizadas debido a que no está implementado en la API de Twitter: 
+ - Remover comentario
+ - Recuperar contraseña
+ - Página de usuario por id
+
 Deployed App
 https://twitterclone-b609d.web.app/
 
