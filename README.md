@@ -9,8 +9,7 @@ Funcionalidades no realizadas debido a que no está implementado en la API de Tw
  - Recuperar contraseña
  - Página de usuario por id
 
-Deployed App
-https://twitterclone-b609d.web.app/
+Local App
 
 
 
